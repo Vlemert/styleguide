@@ -1,0 +1,17 @@
+// HTML
+// <div class="color--$color">$color text</div>
+// <div class="bg-color--$color">Text on a $color background</div>
+
+@mixin colors {
+  @each $color-name, $color in $colors {
+    .color--#{$color-name} {
+      color: #{$color};
+    }
+
+    .bg-color--#{$color-name} {
+      background-color: #{$color};
+    }
+  }
+};
+
+@include colors;

@@ -1,0 +1,13 @@
+// HTML
+// <div class="margin--$margin">$margin text</div>
+// <div class="bg-margin--$margin">Text on a $margin background</div>
+
+@mixin margins {
+	@each $margin-name, $margin in $margins {
+    .push--#{$margin-name} {
+      margin: #{$margin};
+    }
+  }
+};
+
+@include margins;

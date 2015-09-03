@@ -1,0 +1,22 @@
+// Fonts
+
+// Font size (100%)
+$base-font-size: 16px !default;
+
+// Colors
+$black: rgba(0, 0, 0, 0);
+$white: rgba(255, 255, 255, 0);
+
+$colors: (
+    'black': $black,
+    'white': $white,
+) !default;
+
+// Margins
+$margins: (
+    'tiny': 0.5rem, // 1
+    'small': 0.75rem, // 1.5
+    '': 1rem, // 2
+    'large': 1.25rem, // 2.5
+    'huge': 1.5rem, // 3
+) !default;
