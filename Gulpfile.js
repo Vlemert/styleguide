@@ -1,32 +1,32 @@
 var gulp = require('gulp');
-var nodemon = require('gulp-nodemon');
 var sass = require('gulp-sass');
+var styleguide = require('sc5-styleguide');
 
 var config = {
-  scssFiles: './src/scss/**/*.scss'
+  scssFiles: './src/scss/**/*.scss',
+  outputPath: './docs'
 };
 
-gulp.task('serve', function serveTask () {
-  nodemon({
-    script: 'index.js'
-  , ext: 'js html'
-  , env: { 'NODE_ENV': 'development' }
-  , tasks: ['browserify']
-  }).on('restart', function () {
-    console.log('restarted!')
-  });
+gulp.task('styleguide:generate', function () {
+  return gulp.src('./src/scss/**/*.scss')
+    .pipe(styleguide.generate({
+      title: 'Brand Styleguide',
+      server: true,
+      rootPath: config.outputPath,
+      overviewPath: './src/scss/overview.md'
+    }))
+    .pipe(gulp.dest(config.outputPath));
 });
 
-gulp.task('sass', function taskSass () {
-  gulp.src(config.scssFiles)
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('./dist'));
+gulp.task('styleguide:applystyles', function() {
+  return gulp.src('./src/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest(config.outputPath));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch(config.scssFiles, ['sass']);
-});
+gulp.task('styleguide', ['styleguide:generate', 'styleguide:applystyles']);
 
-gulp.task('default', function defaultTask () {
-  // place code for your default task here
+gulp.task('default', ['styleguide'], function defaultTask() {
+  gulp.watch(config.scssFiles, ['styleguide']);
 });

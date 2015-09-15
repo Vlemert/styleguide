@@ -1,3 +1,13 @@
-html {
+// Base
+//
+// html - Applied font smoothing
+//
+// markup:
+// <html>Preview data</html>
+//
+// Styleguide 1.0
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

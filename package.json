@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/marsbergen/styleguide#readme",
   "devDependencies": {
-    "css-wipe": "^4.1.2",
+    "documentjs": "^0.3.0",
     "gulp": "^3.9.0",
     "gulp-minify-css": "^1.2.1",
-    "gulp-nodemon": "^2.0.4",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+    "sc5-styleguide": "^0.3.34",
+    "scss-wipe": "^4.1.2"
   }
 }

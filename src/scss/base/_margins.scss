@@ -1,13 +1,108 @@
-// HTML
-// <div class="margin--$margin">$margin text</div>
-// <div class="bg-margin--$margin">Text on a $margin background</div>
+$margin: 1rem;
+
+$margin-modifiers: (
+  "tiny" : $margin * 0.5,
+  "small": $margin * 0.75,
+  null   : $margin, // Default
+  "large": $margin * 1.25,
+  "huge" : $margin * 1.5,
+) !default;
+
+$padding-modifiers: $margin-modifiers !default;
+
+// Margins
+//
+// .push--tiny         - Apply margin to all sides
+// .push-left--tiny    - Apply margin to left sides
+// .push-right--tiny   - Apply margin to right sides
+// .push-top--tiny     - Apply margin to top sides
+// .push-bottom--tiny  - Apply margin to bottom sides
+// .push-sides--tiny   - Apply margin to left and right sides
+// .push-ends--tiny    - Apply margin to top and bottom sides
+// .push--small        - Apply margin to all sides
+// .push-left--small   - Apply margin to left sides
+// .push-right--small  - Apply margin to right sides
+// .push-top--small    - Apply margin to top sides
+// .push-bottom--small - Apply margin to bottom sides
+// .push-sides--small  - Apply margin to left and right sides
+// .push-ends--small   - Apply margin to top and bottom sides
+// .push               - Apply margin to all sides
+// .push-left          - Apply margin to left sides
+// .push-right         - Apply margin to right sides
+// .push-top           - Apply margin to top sides
+// .push-bottom        - Apply margin to bottom sides
+// .push-sides         - Apply margin to left and right sides
+// .push-ends          - Apply margin to top and bottom sides
+// .push--large        - Apply margin to all sides
+// .push-left--large   - Apply margin to left sides
+// .push-right--large  - Apply margin to right sides
+// .push-top--large    - Apply margin to top sides
+// .push-bottom--large - Apply margin to bottom sides
+// .push-sides--large  - Apply margin to left and right sides
+// .push-ends--large   - Apply margin to top and bottom sides
+// .push--huge         - Apply margin to all sides
+// .push-left--huge    - Apply margin to left sides
+// .push-right--huge   - Apply margin to right sides
+// .push-top--huge     - Apply margin to top sides
+// .push-bottom--huge  - Apply margin to bottom sides
+// .push-sides--huge   - Apply margin to left and right sides
+// .push-ends--huge    - Apply margin to top and bottom sides
+//
+// markup:
+// <div class="{$modifiers}">Demo text</div>
+//
+// Styleguide 2.0
 
 @mixin margins {
-	@each $margin-name, $margin in $margins {
-    .push--#{$margin-name} {
+  @each $margin-name, $margin in $margin-modifiers {
+    $margin-modifier: "";
+
+    @if $margin-name {
+      $margin-modifier: "--" + $margin-name;
+    }
+
+    .push#{$margin-modifier} {
       margin: #{$margin};
     }
+
+    .push-left#{$margin-modifier} { margin-left: #{$margin}; }
+    .push-right#{$margin-modifier} { margin-right: #{$margin}; }
+    .push-top#{$margin-modifier} { margin-top: #{$margin}; }
+    .push-bottom#{$margin-modifier} { margin-bottom: #{$margin}; }
+    .push-sides#{$margin-modifier} { margin-left: #{$margin}; margin-right: #{$margin}; }
+    .push-ends#{$margin-modifier} { margin-top: #{$margin}; margin-bottom: #{$margin}; }
   }
-};
+}
 
 @include margins;
+
+// Padding
+//
+// .soft - Apply padding to all sides
+// .soft--left - Apply padding to left sides
+// .soft--right - Apply padding to right sides
+// .soft--top - Apply padding to top sides
+// .soft--bottom - Apply padding to bottom sides
+// .soft--sides - Apply padding to left and right sides
+// .soft--ends - Apply padding to top and bottom sides
+//
+// markup:
+// <div class="{$modifiers}">Demo text</div>
+//
+// Styleguide 2.1
+
+@mixin paddings {
+  @each $padding-name, $padding in $padding-modifiers {
+    $padding-class-name: ".soft";
+
+    @if $padding-name {
+      $padding-class-name: $padding-class-name + "--" + $padding-name;
+    }
+
+    #{$padding-class-name} {
+      padding: #{$padding};
+    }
+  }
+}
+
+@include paddings;
