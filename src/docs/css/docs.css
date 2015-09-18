@@ -394,8 +394,8 @@ ul, ol {
     content: ""; }
 
 .grid {
-  margin-left: -62.5px;
-  margin-right: -62.5px; }
+  margin-left: -10px;
+  margin-right: -10px; }
   .grid:before {
     display: table;
     content: ""; }
@@ -405,76 +405,76 @@ ul, ol {
     content: ""; }
 
 .column {
-  margin-right: 62.5px;
-  margin-left: 62.5px;
+  margin-right: 10px;
+  margin-left: 10px;
   float: left;
-  width: calc(100% - 125px); }
+  width: calc(100% - 20px); }
 
 .column--one-twelfth {
-  width: calc(8.33333% - 125px); }
+  width: calc(8.33333% - 20px); }
 
 .column--two-twelfth {
-  width: calc(16.66667% - 125px); }
+  width: calc(16.66667% - 20px); }
 
 .column--three-twelfth {
-  width: calc(25% - 125px); }
+  width: calc(25% - 20px); }
 
 .column--four-twelfth {
-  width: calc(33.33333% - 125px); }
+  width: calc(33.33333% - 20px); }
 
 .column--five-twelfth {
-  width: calc(41.66667% - 125px); }
+  width: calc(41.66667% - 20px); }
 
 .column--six-twelfth {
-  width: calc(50% - 125px); }
+  width: calc(50% - 20px); }
 
 .column--seven-twelfth {
-  width: calc(58.33333% - 125px); }
+  width: calc(58.33333% - 20px); }
 
 .column--eight-twelfth {
-  width: calc(66.66667% - 125px); }
+  width: calc(66.66667% - 20px); }
 
 .column--nine-twelfth {
-  width: calc(75% - 125px); }
+  width: calc(75% - 20px); }
 
 .column--ten-twelfth {
-  width: calc(83.33333% - 125px); }
+  width: calc(83.33333% - 20px); }
 
 .column--eleven-twelfth {
-  width: calc(91.66667% - 125px); }
+  width: calc(91.66667% - 20px); }
 
 .column--one-whole {
-  width: calc(100% - 125px); }
+  width: calc(100% - 20px); }
 
 .column--one-half {
-  width: calc(50% - 125px); }
+  width: calc(50% - 20px); }
 
 .column--one-third {
-  width: calc(33.33333% - 125px); }
+  width: calc(33.33333% - 20px); }
 
 .column--two-third {
-  width: calc(66.66667% - 125px); }
+  width: calc(66.66667% - 20px); }
 
 .column--one-quarter {
-  width: calc(25% - 125px); }
+  width: calc(25% - 20px); }
 
 .column--three-quarter {
-  width: calc(75% - 125px); }
+  width: calc(75% - 20px); }
 
 .column--one-sixth {
-  width: calc(16.66667% - 125px); }
+  width: calc(16.66667% - 20px); }
 
 .column--two-sixth {
-  width: calc(33.33333% - 125px); }
+  width: calc(33.33333% - 20px); }
 
 .column--three-sixth {
-  width: calc(50% - 125px); }
+  width: calc(50% - 20px); }
 
 .column--four-sixth {
-  width: calc(66.66667% - 125px); }
+  width: calc(66.66667% - 20px); }
 
 .column--five-sixth {
-  width: calc(83.33333% - 125px); }
+  width: calc(83.33333% - 20px); }
 
 .grid--flex {
   margin-left: 0;
