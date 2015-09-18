@@ -26,7 +26,7 @@
     </header>
 
     <header class="masthead">
-      <div class="grid">
+      <div class="container">
         <a href="{{ site.baseurl }}/" class="masthead-logo">
           <span class="mega-octicon octicon-package"></span>
           Primer
@@ -43,7 +43,7 @@
 
     {% if page.title == "Home" %}
       <div class="jumbotron">
-        <div class="grid">
+        <div class="container">
           <h1>Primer</h1>
           <p>The CSS toolkit and guidelines that power GitHub.</p>
 
@@ -53,8 +53,8 @@
         </div>
       </div>
 
-      <div class="grid about-that push-bottom">
-        <div class="columns">
+      <div class="container about-that push-bottom">
+        <div class="grid">
           <div class="column column--one-third">
             <h2>Made at GitHub</h2>
             <p>Primer is the basecoat of GitHub, made by nerds just like you who share a passion for HTML and CSS.</p>
@@ -71,9 +71,9 @@
       </div>
     {% endif %}
 
-    {{ content }}
+    <div class="container">
+      {{ content }}
 
-    <div class="grid">
       <footer class="footer">
         Copyright GitHub {{ site.time | date: '%Y' }}.<br>
         Created and maintained by the CSS team at GitHub. <strong>Currently v{{ site.version }}.</strong>

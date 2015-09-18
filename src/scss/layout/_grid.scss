@@ -1,3 +1,14 @@
+$grid-width:          960px !default;
+$grid-gutter:         10px !default;
+$grid-columns:        12 !default;
+$grid-columns-tablet: $grid-columns !default;
+$grid-columns-mobile: 3 !default;
+$grid-gutter-type:    "margin" !default; // Padding, margin, none
+$grid-debug:          false !default;
+$grid-debug-color:    #000000 !default;
+
+$layout-direction: "LTR" !default;
+
 @function layout-direction() {
   @return if($layout-direction == "RTL", right, left);
 }
@@ -5,19 +16,19 @@
 @function grid-column-width($col: 1, $columns: $grid-columns) {
   $col-width: unquote(($col * 100 / $columns) + "%");
 
-  @return if($grid-gutter-type == "padding", $col-width, calc(#{$col-width} - #{$grid-gutter * 2}));
+  @return if($grid-gutter-type == "padding", $col-width, calc(#{$col-width} - #{$grid-gutter}));
 }
 
-$grid-width:          960px !default;
-$grid-gutter:         10px !default;
-$grid-columns:        12 !default;
-$grid-columns-tablet: $grid-columns !default;
-$grid-columns-mobile: 3 !default;
-$grid-gutter-type:    "padding" !default; // Padding or margin
-$grid-debug:          false !default;
-$grid-debug-color:    #000000 !default;
+@mixin column-gutter() {
+  @if $grid-gutter-type != "padding" and $grid-gutter-type != "margin" and $grid-gutter-type != "none" {
+    $grid-gutter-type: "padding";
+  }
 
-$layout-direction: "LTR" !default;
+  @if $grid-gutter-type == "margin" {
+    #{$grid-gutter-type}-right: $grid-gutter / 2;
+    #{$grid-gutter-type}-left: $grid-gutter / 2;
+  }
+}
 
 $columns: (
   'one-twelfth': grid-column-width(1, 12),
@@ -44,7 +55,7 @@ $columns: (
   'five-sixth': grid-column-width(5, 6),
 ) !default;
 
-.grid {
+.container {
   @include clearfix;
   width: $grid-width;
   margin-right: auto;
@@ -56,17 +67,19 @@ $columns: (
 // Create rows with `.columns` to clear the floated columns and outdent the
 // padding on `.column`s with negative margin for alignment.
 
-.columns {
+.grid {
   @include clearfix;
-  margin-left: -$grid-gutter;
-  margin-right: -$grid-gutter;
+
+  @if $grid-gutter-type == "margin" {
+    margin-left: -$grid-gutter / 2;
+    margin-right: -$grid-gutter / 2;
+  }
 }
 
 // Base class for every column (requires a column width from below)
 .column {
-  float: left;
-  #{$grid-gutter-type}-right: $grid-gutter;
-  #{$grid-gutter-type}-left: $grid-gutter;
+  @include column-gutter();
+  float: layout-direction();
   width: grid-column-width(1, 1);
 }
 
@@ -80,13 +93,18 @@ $columns: (
 @include render-columns;
 
 // Equal width columns via table sorcery.
-.column--flex {
-  display: table-cell;
-  width: 1%;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
-  vertical-align: top;
-  float: none;
+.grid--flex {
+  margin-left: 0;
+  margin-right: 0;
+
+  .column {
+    display: table-cell;
+    width: 1%;
+    //padding-right: $grid-gutter / 2;
+    //padding-left: $grid-gutter / 2;
+    vertical-align: top;
+    float: none;
+  }
 }
 
 // If debug mode is enabled, make the columns visible
