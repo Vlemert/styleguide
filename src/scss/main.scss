@@ -2,9 +2,13 @@
 
 @import "base/reset";
 
+@import "mixins/clearfix";
+@import "mixins/font-faces";
+
 @import "utils/variables";
 
 @import "base/base";
 @import "base/margins";
+@import "layout/grid";
 @import "base/colors";
 @import "base/typography";

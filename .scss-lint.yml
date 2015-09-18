@@ -82,9 +82,6 @@ linters:
     enabled: true
     max_depth: 3
 
-  PlaceholderInExtend:
-    enabled: true
-
   PropertySortOrder:
     enabled: false
     ignore_unspecified: false

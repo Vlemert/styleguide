@@ -1,23 +1,8 @@
-### JetBrains
-
-.idea/
-
-# Logs
-logs
-npm-debug.log*
-
-# Runtime data
-pids
-
-# Coverage directory used by tools like istanbul
-coverage
-
-# NPM
+# Ignore node_modules, because duh
 node_modules
 
-# Build directory
-dist
-
-# OS X
+# Ignore generated files
 .DS_Store
-docs
+
+# Jetbrains
+.idea

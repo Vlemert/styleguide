@@ -1,0 +1,28 @@
+//---
+//# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+//# only main files contain this front matter, not partials.
+//---
+
+//
+// Variables
+//
+$grid-width: 80%;
+$grid-gutter: 40px;
+$grid-debug: true;
+$grid-gutter-type: "margin";
+
+@import "../../scss/main";
+
+//
+// Docs overrides
+//
+.docs__top-bar {
+  background-color: map-get($colors, "blue");
+  @extend .soft-ends;
+}
+
+.docs__logo {
+  @extend %base-font;
+  color: map-get($colors, "white");
+  text-decoration: none;
+}
