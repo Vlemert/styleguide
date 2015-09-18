@@ -79,32 +79,6 @@ $columns: (
 }
 @include render-columns;
 
-//
-//// Column widths
-//.column--one-twelfth {
-//  width: grid-column-width(1, 12);
-//}
-//
-//.column--one-sixth {
-//  width: grid-column-width(1, 6);
-//}
-//
-//.column--one-quarter {
-//  width: grid-column-width(1, 4);
-//}
-//
-//.column--one-third {
-//  width: grid-column-width(1, 3);
-//}
-//
-//.column--two-third {
-//  width: grid-column-width(2, 3);
-//}
-//
-//.column--one-half {
-//  width: grid-column-width(1, 2);
-//}
-
 // Equal width columns via table sorcery.
 .column--flex {
   display: table-cell;
