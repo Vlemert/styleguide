@@ -12,15 +12,29 @@
 
 .text-right { text-align: right; }
 
-.text-bold { font-weight: bold; }
+strong { font-weight: bold; }
 
-.text-italic { font-style: italic; }
+em { font-style: italic; }
+
+small { font-size: $base-font-size * 0.75; }
+
+u { text-decoration: underline; }
+
+del,
+s { text-decoration: line-through; }
+
+mark {
+  background-color: color("accent-20");
+  font-style: normal;
+  font-weight: normal;
+  padding: 0 5px;
+}
 
 .text-nowrap {
   white-space: nowrap;
 }
 
-.truncate {
+.text-truncate {
   display: inline-block;
   max-width: 125px;
   overflow: hidden;

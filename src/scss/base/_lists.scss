@@ -1,4 +1,5 @@
 $enable-unordered-list: true !default;
+$enable-ordered-list: true !default;
 $list-style-type: disc !default;
 $sub-list-style-type: circle !default;
 
@@ -28,7 +29,6 @@ ul,
       margin-bottom: margin("tiny");
     }
   }
-
 }
 
 .list--horizontal {
@@ -36,5 +36,19 @@ ul,
   li {
     display: inline;
     float: left;
+  }
+}
+
+ol,
+.list-ordered {
+  @if ($enable-ordered-list) {
+    list-style-type: decimal;
+    margin-left: margin();
+
+    ol,
+    .list-ordered {
+      margin-top: margin("tiny");
+      margin-bottom: margin("tiny");
+    }
   }
 }

@@ -39,9 +39,14 @@
 {{ content }}
 
 <div class="container">
-	<footer class="footer">
-		Copyright Craft {{ site.time | date: '%Y' }}.<br>
-		Created and maintained by Patrick van Marsbergen. <strong>Currently v{{ site.version }}.</strong>
+	<footer class="grid footer">
+		<div class="column column--one-quarter column-t--one-third">
+			&nbsp;
+		</div>
+		<div class="column column--three-quarter column-t--two-third">
+			Copyright Craft {{ site.time | date: '%Y' }}.<br>
+			Created and maintained by Patrick van Marsbergen. <strong>Currently v{{ site.version }}.</strong>
+		</div>
 	</footer>
 </div>
 

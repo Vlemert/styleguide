@@ -1050,16 +1050,32 @@ pre {
 .text-right {
   text-align: right; }
 
-.text-bold {
+strong {
   font-weight: bold; }
 
-.text-italic {
+em {
   font-style: italic; }
+
+small {
+  font-size: 12px; }
+
+u {
+  text-decoration: underline; }
+
+del,
+s {
+  text-decoration: line-through; }
+
+mark {
+  background-color: #d4faff;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0 5px; }
 
 .text-nowrap {
   white-space: nowrap; }
 
-.truncate {
+.text-truncate {
   display: inline-block;
   max-width: 125px;
   overflow: hidden;
@@ -1089,6 +1105,17 @@ ul,
   .list--horizontal li {
     display: inline;
     float: left; }
+
+ol,
+.list-ordered {
+  list-style-type: decimal;
+  margin-left: 1.5rem; }
+  ol ol,
+  ol .list-ordered,
+  .list-ordered ol,
+  .list-ordered .list-ordered {
+    margin-top: 0.46354rem;
+    margin-bottom: 0.46354rem; }
 
 .button {
   border-radius: 3px;
@@ -1128,7 +1155,7 @@ ul,
 blockquote,
 .blockquote {
   border-left: 2px solid #d9d9de;
-  background-color: #f7f7f7;
+  color: #3b444f;
   padding: 0.46354rem 0.92707rem;
   margin-bottom: 0.92707rem;
   margin-left: 0.92707rem; }

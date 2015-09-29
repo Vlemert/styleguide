@@ -19,6 +19,17 @@
 				</li>
 			</ul>
 		</li>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Typography' or page.title == 'Code' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/typography/">
+				Typography
+			</a>
+
+			<ul>
+				<li>
+					<a href="{{ site.baseurl }}/typography/code" class="sidebar__item {% if page.title == 'Code' %}sidebar__item--selected{% endif %}">Code</a>
+				</li>
+			</ul>
+		</li>
 	</ul>
 </nav>
 
