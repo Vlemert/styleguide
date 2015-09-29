@@ -1,0 +1,43 @@
+<nav class="sidebar push-bottom">
+	<ul>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Scaffolding' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
+				Scaffolding
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Layout' or page.title == 'Grid' or page.title == 'Spacing' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/layout/">
+				Layout
+			</a>
+
+			<ul>
+				<li>
+					<a href="{{ site.baseurl }}/layout/grid" class="sidebar__item {% if page.title == 'Grid' %}sidebar__item--selected{% endif %}">Grid</a>
+				</li>
+				<li>
+					<a href="{{ site.baseurl }}/layout/spacing" class="sidebar__item {% if page.title == 'Spacing' %}sidebar__item--selected{% endif %}">Spacing</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav class="sidebar">
+	<ul>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Guidelines' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/guidelines/">
+			Code guidelines
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Colors' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/colors/">
+			Colors
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Markdown' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/markdown/">
+			Markdown
+			</a>
+		</li>
+	</ul>
+</nav>

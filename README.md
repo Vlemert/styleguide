@@ -11,8 +11,9 @@ Run NPM setup
 Or
 
   ``` 
+  gem install bundler
+  bundle install
   npm install
-  gem install jekyll 
   ```
 
 ## Watch Sass changes and build docs
@@ -21,7 +22,7 @@ Or
   npm run watch
   ```
   
-## Build once
+## Build the CSS and Docs just once
 
   ```
   npm run build

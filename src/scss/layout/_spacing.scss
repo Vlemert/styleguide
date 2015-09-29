@@ -1,16 +1,16 @@
-$margin: 1rem !default;
+$margin: 1.5rem !default;
+$golden-ratio: 1.618;
 
 $margin-modifiers: (
   "clear" : 0,
-  "tiny" : $margin * 0.5,
-  "small": $margin * 0.75,
-  null   : $margin, // Default
-  "large": $margin * 1.25,
-  "huge" : $margin * 1.5,
+  "tiny"  : $margin / ($golden-ratio * 2),
+  "small" : $margin / $golden-ratio,
+  null    : $margin,
+  "large" : $margin * $golden-ratio,
+  "huge"  : $margin * ($golden-ratio * 2),
 ) !default;
 
 $padding-modifiers: $margin-modifiers !default;
-
 
 //
 // Spacing mixin
@@ -45,3 +45,11 @@ $padding-modifiers: $margin-modifiers !default;
 //
 @include spacing('margin', 'push', $margin-modifiers);
 @include spacing('padding', 'soft', $padding-modifiers);
+
+@function margin($modifier: null) {
+  @return unquote(map-get($margin-modifiers, $modifier));
+}
+
+@function padding($modifier: null) {
+  @return unquote(map-get($padding-modifiers, $modifier));
+}

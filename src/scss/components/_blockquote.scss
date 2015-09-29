@@ -1,0 +1,16 @@
+blockquote,
+.blockquote {
+  border-left: 2px solid color("light-60");
+  background-color: color("light-20");
+  padding: padding("tiny") padding("small");
+  margin-bottom: margin("small");
+  margin-left: margin("small");
+
+  p {
+    margin-bottom: margin("small");
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+$enable-unordered-list: true !default;
+$list-style-type: disc !default;
+$sub-list-style-type: circle !default;
+
+@mixin set-unordered-list() {
+  list-style-type: $list-style-type;
+  margin-left: margin();
+  margin-top: margin("small");
+  margin-bottom: margin("small");
+}
+
+@mixin reset-unordered-list() {
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+.list {
+  @if ($enable-unordered-list) {
+    @include set-unordered-list;
+
+    ul,
+    .list {
+      list-style-type: $sub-list-style-type;
+      margin-top: margin("tiny");
+      margin-bottom: margin("tiny");
+    }
+  }
+
+}
+
+.list--horizontal {
+  @include reset-unordered-list;
+  li {
+    display: inline;
+    float: left;
+  }
+}

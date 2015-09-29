@@ -1,0 +1,52 @@
+.sidebar {
+  @include border-radius();
+  border: 1px solid color("light-60");
+
+  ul {
+    @include reset-unordered-list;
+  }
+}
+
+.sidebar__item {
+  padding: padding("tiny") padding("small");
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: color("dark-80");
+  border-bottom: 1px solid color("light-40");
+
+  // Style a.sidebar__item, if sidebar__item render it as a block in stead of inline
+  a, & {
+    display: block;
+    &:hover {
+      background-color: color("light-20");
+    }
+  }
+
+  li:last-child,
+  :last-child > & {
+    border-bottom: 0;
+  }
+
+  + ul {
+    display: none;
+
+    .sidebar__item {
+      padding: padding("tiny") padding();
+      border-bottom: 0;
+      color: color("dark-40");
+    }
+  }
+}
+
+.sidebar__item--selected {
+  font-weight: bold;
+
+  + ul {
+    display: block;
+  }
+}
+
+.sidebar > ul > li.sidebar__item--selected,
+.sidebar > ul > li > .sidebar__item--selected {
+  border-left: 2px solid color("accent");
+}

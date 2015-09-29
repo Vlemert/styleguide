@@ -3,26 +3,20 @@
 //# only main files contain this front matter, not partials.
 //---
 
-//
-// Variables
-//
-$grid-width: 80%;
-$grid-gutter: 20px;
-$grid-debug: true;
-$grid-gutter-type: "margin";
+@import "utils/variables";
 
 @import "../../scss/main";
 
 //
 // Docs overrides
 //
-.docs__top-bar {
-  background-color: map-get($colors, "blue");
-  @extend .soft-ends;
-}
+@import "components/syntax";
+@import "components/example";
+@import "components/typography";
+@import "components/topbar";
+@import "components/sidebar";
+@import "components/table";
 
-.docs__logo {
-  @extend %base-font;
-  color: map-get($colors, "white");
-  text-decoration: none;
+.anchor-link {
+  color: color("dark-40");
 }

@@ -1,0 +1,23 @@
+.docs__top-bar {
+  background-color: color("accent-80");
+  @extend .soft-ends;
+}
+
+.docs__logo {
+  @extend %base-font;
+  color: map-get($colors, "white");
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.docs__nav li {
+  margin-right: map-get($margin-modifiers, "huge");
+
+  a {
+    display: block;
+    color: color("white");
+    text-decoration: none;
+  }
+}

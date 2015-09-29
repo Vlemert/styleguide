@@ -111,10 +111,6 @@ linters:
     enabled: true
     allow_single_line_rule_sets: true
 
-  SingleLinePerSelector:
-    enabled: true
-    style: one_space
-
   SpaceAfterComma:
     enabled: true
 

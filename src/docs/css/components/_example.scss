@@ -1,0 +1,56 @@
+.docs-example {
+  @include border-radius($border-radius $border-radius 0 0);
+  padding: padding("small");
+  border-top: 1px solid color("light-60");
+  border-left: 1px solid color("light-60");
+  border-right: 1px solid color("light-60");
+  position: relative;
+
+  &:after {
+    @include border-radius(0 $border-radius);
+    content: "demo";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: color("light-20");
+    padding: 0 padding("tiny");
+    color: color("light");
+    font-size: 0.75rem;
+    font-family: $base-font-family-monospace;
+  }
+
+  + .highlight {
+    @include border-radius(0 0 $border-radius $border-radius);
+    border: 1px solid color("light-60");
+
+    pre {
+      margin: 0;
+    }
+  }
+
+  .grid {
+    margin-bottom: margin();
+  }
+
+  .column {
+    padding: padding("small");
+    font-family: $base-font-family-monospace;
+    background-color: color("accent-20");
+    border: 1px solid color("accent-40");
+  }
+}
+
+.highlight {
+  margin-bottom: margin("small");
+}
+
+.docs__color {
+  @include border-radius();
+  padding: $margin * 2 0;
+  text-align: center;
+}
+
+table code,
+p > code {
+  @extend .text-nowrap;
+}

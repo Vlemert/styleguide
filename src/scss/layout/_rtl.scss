@@ -1,0 +1,5 @@
+$layout-direction: "LTR" !default;
+
+@function layout-direction() {
+  @return if($layout-direction == "RTL", right, left);
+}

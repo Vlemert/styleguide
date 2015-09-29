@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<title>
+		Spacing &middot; Styleguide
+	</title>
+
+	<link rel="stylesheet" href="/css/docs.css">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+	<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+
+<header class="docs__top-bar">
+	<div class="container">
+		<a href="/" class="docs__logo">Craft</a>
+
+		<nav class="docs__nav right">
+			<ul class="list--horizontal">
+				<li><a href="#">Docs</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Github</a></li>
+				<li><a href="#">Install</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="container">
+	<div class="grid soft-top">
+		<div class="column column--one-quarter column-t--one-third">
+			<nav class="sidebar push-bottom">
+	<ul>
+		<li>
+			<a class="sidebar__item " href="/scaffolding/">
+				Scaffolding
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item sidebar__item--selected" href="/layout/">
+				Layout
+			</a>
+
+			<ul>
+				<li>
+					<a href="/layout/grid" class="sidebar__item ">Grid</a>
+				</li>
+				<li>
+					<a href="/layout/spacing" class="sidebar__item sidebar__item--selected">Spacing</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav class="sidebar">
+	<ul>
+		<li>
+			<a class="sidebar__item " href="/guidelines/">
+			Code guidelines
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item " href="/colors/">
+			Colors
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item " href="/markdown/">
+			Markdown
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		</div>
+		<div class="column column--three-quarter column-t--two-third">
+			<h1 id="spacing">Spacing</h1>
+
+<p class="lead">
+  Spacing gives you helpers to apply paddings and margins to your html elements. TL;DR, by default `padding` is called 
+  `soft` and `margin` is called `push`. By default the modifiers make use of the Golden Ratio.
+</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li><a href="#variables">Variables</a></li>
+  <li><a href="#margin">Margin</a></li>
+  <li><a href="#padding">Padding</a></li>
+  <li><a href="#default-available-modifiers">Default available modifiers</a></li>
+</ul>
+
+<h2 id="variables">Variables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sass Variable</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>$margin</code></td>
+      <td><code>1.5rem</code></td>
+      <td>The default margin</td>
+    </tr>
+    <tr>
+      <td><code>$golden-ratio</code></td>
+      <td><code>1.618</code></td>
+      <td>The golden ratio used to calculate margin modifiers</td>
+    </tr>
+    <tr>
+      <td><code>$margin-modifiers</code></td>
+      <td><a href="#default-available-modifiers"><code>(...)</code></a></td>
+      <td>A Sass key-value list to define the margin modifier naming and value per modifier</td>
+    </tr>
+    <tr>
+      <td><code>$padding-modifiers</code></td>
+      <td><code>$margin-modifiers</code></td>
+      <td>A Sass key-value list to define the padding modifier naming and value per modifier</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="margin">Margin</h2>
+
+<p>The default available margins are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class name</th>
+      <th>Sides</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.push</code></td>
+      <td>top / right / bottom / left</td>
+    </tr>
+    <tr>
+      <td><code>.push-top</code></td>
+      <td>top</td>
+    </tr>
+    <tr>
+      <td><code>.push-right</code></td>
+      <td>right</td>
+    </tr>
+    <tr>
+      <td><code>.push-bottom</code></td>
+      <td>bottom</td>
+    </tr>
+    <tr>
+      <td><code>.push-left</code></td>
+      <td>left</td>
+    </tr>
+    <tr>
+      <td><code>.push-sides</code></td>
+      <td>left / right</td>
+    </tr>
+    <tr>
+      <td><code>.push-ends</code></td>
+      <td>top / bottom</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="demo">Demo</h3>
+
+<div class="docs-example clearfix"><div class="bg-color--accent-80 push-bottom--tiny">push-bottom--tiny</div>
+<div class="bg-color--accent-80 push-bottom--small">push-bottom--small</div>
+<div class="bg-color--accent-80 push-bottom">push-bottom</div>
+<div class="bg-color--accent-80 push-bottom--large">push-bottom--large</div>
+<div class="bg-color--accent-80 push-bottom--huge">push-bottom--huge</div>
+<div class="bg-color--accent-80 push-bottom--clear">push-bottom--clear</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny"</span><span class="nt">&gt;</span>push-bottom--tiny<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--small"</span><span class="nt">&gt;</span>push-bottom--small<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom"</span><span class="nt">&gt;</span>push-bottom<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--large"</span><span class="nt">&gt;</span>push-bottom--large<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--huge"</span><span class="nt">&gt;</span>push-bottom--huge<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--clear"</span><span class="nt">&gt;</span>push-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="padding">Padding</h2>
+
+<div class="docs-example clearfix"><div class="bg-color--accent-80 push-bottom--tiny soft-bottom--tiny">soft-bottom--tiny</div>
+<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--small">soft-bottom--small</div>
+<div class="bg-color--accent-80 push-bottom--tiny soft-bottom">soft-bottom</div>
+<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--large">soft-bottom--large</div>
+<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
+<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--tiny"</span><span class="nt">&gt;</span>soft-bottom--tiny<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--small"</span><span class="nt">&gt;</span>soft-bottom--small<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom"</span><span class="nt">&gt;</span>soft-bottom<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--large"</span><span class="nt">&gt;</span>soft-bottom--large<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--huge"</span><span class="nt">&gt;</span>soft-bottom--huge<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--clear"</span><span class="nt">&gt;</span>soft-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="default-available-modifiers">Default available modifiers</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modifier</th>
+      <th>Based on <code>$margin: 1.5rem</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.*--clear</code></td>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <td><code>.*--tiny</code></td>
+      <td><code>0.46354rem</code></td>
+    </tr>
+    <tr>
+      <td><code>.*--small</code></td>
+      <td><code>0.92707rem</code></td>
+    </tr>
+    <tr>
+      <td><code>.*</code></td>
+      <td><code>1.5rem</code></td>
+    </tr>
+    <tr>
+      <td><code>.*--large</code></td>
+      <td><code>2.427rem</code></td>
+    </tr>
+    <tr>
+      <td><code>.*--huge</code></td>
+      <td><code>4.854rem</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-modifiers</span><span class="p">:</span> <span class="p">(</span>
+  <span class="s2">"clear"</span> <span class="o">:</span> <span class="m">0</span><span class="o">,</span>
+  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
+  <span class="n">null</span>    <span class="o">:</span> <span class="nv">$margin</span><span class="o">,</span>
+  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
+  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+<span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
+
+<span class="nv">$padding-modifiers</span><span class="p">:</span> <span class="nv">$margin-modifiers</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></div>
+
+
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<footer class="footer">
+		Copyright Craft 2015.<br>
+		Created and maintained by Patrick van Marsbergen. <strong>Currently v1.0.0.</strong>
+	</footer>
+</div>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+	var selector = 'h1, h2, h3';
+	anchors.options = {
+		placement: 'right',
+		class: 'anchor-link'
+	};
+	anchors.add(selector);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+//
+// Variables
+//
+$border-radius: 5px;
+$container-width: 80%;
+$container-max-width-mobile: 960px;
+
+$grid-gutter-type: "margin";
+
+$h1-font-size: 2.5rem;
+
+$colors: (
+  "white":    rgba(255, 255, 255, 1),
+  "light-20": rgba(247, 247, 247, 1),
+  "light-40": rgba(230, 230, 233, 1),
+  "light-60": rgba(217, 217, 222, 1),
+  "light-80": rgba(205, 205, 211, 1),
+  "light":    rgba(192, 192, 200, 1),
+
+  "dark-20": rgba(153, 169, 179, 1),
+  "dark-40": rgba(103, 116, 124, 1),
+  "dark-60": rgba(59, 68, 79, 1),
+  "dark-80": rgba(23, 57, 86, 1),
+  "dark":    rgba(20, 43, 68, 1),
+  "black":   rgba(0, 0, 0, 1),
+
+  "accent-20": rgba(212, 250, 255, 1),
+  "accent-40": rgba(185, 240, 255, 1),
+  "accent-60": rgba(163, 228, 255, 1),
+  "accent-80": rgba(109, 212, 255, 1),
+  "accent":    rgba(66, 192, 255, 1),
+);

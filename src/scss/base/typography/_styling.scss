@@ -1,0 +1,30 @@
+// Larger leading paragraphs
+.lead {
+  font-size: $base-font-size * 1.25;
+  line-height: ($base-font-size * 1.25) * 1.618;
+  color: color("dark-60");
+  margin-bottom: margin("small");
+}
+
+.text-left { text-align: left; }
+
+.text-center { text-align: center; }
+
+.text-right { text-align: right; }
+
+.text-bold { font-weight: bold; }
+
+.text-italic { font-style: italic; }
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.truncate {
+  display: inline-block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: top;
+}

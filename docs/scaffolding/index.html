@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+
+	<title>
+		Scaffolding &middot; Styleguide
+	</title>
+
+	<link rel="stylesheet" href="/css/docs.css">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+	<link rel="icon" href="/favicon.ico">
+</head>
+<body>
+
+<header class="docs__top-bar">
+	<div class="container">
+		<a href="/" class="docs__logo">Craft</a>
+
+		<nav class="docs__nav right">
+			<ul class="list--horizontal">
+				<li><a href="#">Docs</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Github</a></li>
+				<li><a href="#">Install</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div class="container">
+	<div class="grid soft-top">
+		<div class="column column--one-quarter column-t--one-third">
+			<nav class="sidebar push-bottom">
+	<ul>
+		<li>
+			<a class="sidebar__item sidebar__item--selected" href="/scaffolding/">
+				Scaffolding
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item " href="/layout/">
+				Layout
+			</a>
+
+			<ul>
+				<li>
+					<a href="/layout/grid" class="sidebar__item ">Grid</a>
+				</li>
+				<li>
+					<a href="/layout/spacing" class="sidebar__item ">Spacing</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav class="sidebar">
+	<ul>
+		<li>
+			<a class="sidebar__item " href="/guidelines/">
+			Code guidelines
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item " href="/colors/">
+			Colors
+			</a>
+		</li>
+		<li>
+			<a class="sidebar__item " href="/markdown/">
+			Markdown
+			</a>
+		</li>
+	</ul>
+</nav>
+
+		</div>
+		<div class="column column--three-quarter column-t--two-third">
+			<h1 id="scaffolding">Scaffolding</h1>
+
+<p>Scaffolding refers to the global resets and depedencies Craft is built upon.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li>HTML5 Doctype</li>
+  <li>Box-sizing</li>
+  <li>Built on (S)CSS-Wipe</li>
+</ul>
+
+<h2 id="html5-doctype">HTML5 Doctype</h2>
+
+<p>Craft makes use of certain HTML elements and CSS properties that <em>require</em> the use of the HTML5 doctype. Include it at
+the beginning of all your pages</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<h2 id="box-sizing">Box-sizing</h2>
+
+<p>We reset <code>box-sizing</code> to <code>border-box</code> for every element in Craft. This allows us to more easily assign widths to elements
+that also have <code>padding</code> and <code>border</code>s.</p>
+
+<h2 id="build-on-scss-wipe">Build on (S)CSS-Wipe</h2>
+
+<p>For improved cross-browser rendering, we use <a href="https://www.npmjs.com/package/scss-wipe">SCSS-Wipe</a>, which is a SCSS port
+for <a href="https://www.npmjs.com/package/css-wipe">CSS-Wipe</a>.</p>
+
+<p>Some features of CSS-Wipe are:</p>
+
+<ul>
+  <li>removes all padding, margin and border</li>
+  <li>wipes decorations</li>
+  <li>sets box-sizing: border-box for predictable size calculations</li>
+  <li>resets list style types</li>
+  <li>reset styles on bleeding edge webkit elements</li>
+</ul>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<footer class="footer">
+		Copyright Craft 2015.<br>
+		Created and maintained by Patrick van Marsbergen. <strong>Currently v1.0.0.</strong>
+	</footer>
+</div>
+
+<script src="/js/anchor.min.js"></script>
+<script>
+	var selector = 'h1, h2, h3';
+	anchors.options = {
+		placement: 'right',
+		class: 'anchor-link'
+	};
+	anchors.add(selector);
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+table {
+  @extend .table;
+  
+  thead th {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,54 @@
+// Toggle
+$enabled-container-responsive: true !default;
+
+// Variable settings
+$container-width: 960px !default;
+$container-max-width-desktop: null !default;
+$container-max-width-tablet: null !default;
+$container-max-width-mobile: null !default;
+$container-sides-padding: padding() !default;
+
+.container {
+  @include clearfix;
+  @if $enabled-container-responsive {
+    max-width: $container-width;
+
+    @if $container-max-width-mobile {
+      @include mobile {
+        max-width: $container-max-width-mobile;
+      }
+    }
+    @if $container-max-width-tablet {
+      @include tablet {
+        max-width: $container-max-width-tablet;
+      }
+    }
+    @if $container-max-width-desktop {
+      @include desktop {
+        max-width: $container-max-width-desktop;
+      }
+    }
+    padding-left: $container-sides-padding;
+    padding-right: $container-sides-padding;
+  }
+  @else {
+    width: $container-width;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.container--left {
+  margin-left: 0;
+}
+
+.container--right {
+  margin-right: 0;
+}
+
+.jumbotron {
+  @include clearfix;
+  width: 100%;
+  padding: map-get($margin-modifiers, "huge") calc((100% - #{$container-width}) / 2);
+}
