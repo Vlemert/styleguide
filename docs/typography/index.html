@@ -58,6 +58,9 @@
 				<li>
 					<a href="/layout/spacing" class="sidebar__item ">Spacing</a>
 				</li>
+				<li>
+					<a href="/layout/utilities" class="sidebar__item ">Utilities</a>
+				</li>
 			</ul>
 		</li>
 		<li>
@@ -107,6 +110,7 @@
 <h2 id="contents">Contents</h2>
 
 <ul>
+  <li><a href="#variables">Variables</a></li>
   <li><a href="#headings">Headings</a></li>
   <li><a href="#body-text">Body text</a></li>
   <li><a href="#lead-paragraph">Lead paragraph</a></li>
@@ -121,7 +125,105 @@
   </li>
 </ul>
 
+<h2 id="variables">Variables</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sass Variable</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>$base-font-size</code></td>
+      <td><code>16px</code></td>
+      <td>The base font-size, by default all <code>rem</code> calculations are based on this value</td>
+    </tr>
+    <tr>
+      <td><code>$base-font-family-sans-serif</code></td>
+      <td><code>"Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
+      <td>The base font-family for <em>sans-serif</em> fonts</td>
+    </tr>
+    <tr>
+      <td><code>$base-font-family-serif</code></td>
+      <td><code>Georgia, "Times New Roman", Times, serif</code></td>
+      <td>The base font-family for <em>serif</em> fonts</td>
+    </tr>
+    <tr>
+      <td><code>$base-font-family-monospace</code></td>
+      <td><code>Menlo, Monaco, Consolas, "Courier New", monospace</code></td>
+      <td>The base font-family for <em>monospace</em> fonts</td>
+    </tr>
+    <tr>
+      <td><code>$base-font-family</code></td>
+      <td><code>16px</code></td>
+      <td>The base font-family where you’re application is based on.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="headings">Headings</h2>
+
+<h3 id="variables-1">Variables</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sass Variable</th>
+      <th>Default Value</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>$heading-font-family</code></td>
+      <td><code>inherit</code></td>
+      <td>The font-family for all headers</td>
+    </tr>
+    <tr>
+      <td><code>$heading-font-weight</code></td>
+      <td><code>bold</code></td>
+      <td>The default font-weight for all headers</td>
+    </tr>
+    <tr>
+      <td><code>$heading-color</code></td>
+      <td><code>inherit</code></td>
+      <td>The default text color for all headers</td>
+    </tr>
+    <tr>
+      <td><code>$h1-font-size</code></td>
+      <td><code>3rem</code></td>
+      <td>The default font-size for <code>H1</code></td>
+    </tr>
+    <tr>
+      <td><code>$h2-font-size</code></td>
+      <td><code>1.75rem</code></td>
+      <td>The default font-size for <code>H2</code></td>
+    </tr>
+    <tr>
+      <td><code>$h3-font-size</code></td>
+      <td><code>1.5rem</code></td>
+      <td>The default font-size for <code>H3</code></td>
+    </tr>
+    <tr>
+      <td><code>$h4-font-size</code></td>
+      <td><code>1.25rem</code></td>
+      <td>The default font-size for <code>H4</code></td>
+    </tr>
+    <tr>
+      <td><code>$h5-font-size</code></td>
+      <td><code>1rem</code></td>
+      <td>The default font-size for <code>H5</code></td>
+    </tr>
+    <tr>
+      <td><code>$h6-font-size</code></td>
+      <td><code>1rem</code></td>
+      <td>The default font-size for <code>H6</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="docs-example clearfix"><h1>h1. Craft heading</h1>
 <h2>h2. Craft heading</h2>

@@ -424,36 +424,6 @@ ul, ol {
 .hidden {
   display: none; }
 
-.container {
-  max-width: 960px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden; }
-  .container:before,
-  .container:after {
-    content: " ";
-    display: table; }
-  .container:after {
-    clear: both; }
-
-.container--left {
-  margin-left: 0; }
-
-.container--right {
-  margin-right: 0; }
-
-.jumbotron {
-  width: 100%;
-  padding: 4.854rem calc((100% - 960px) / 2); }
-  .jumbotron:before,
-  .jumbotron:after {
-    content: " ";
-    display: table; }
-  .jumbotron:after {
-    clear: both; }
-
 .grid {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
@@ -863,6 +833,36 @@ ul, ol {
     vertical-align: top;
     float: none; }
 
+.container {
+  max-width: 960px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden; }
+  .container:before,
+  .container:after {
+    content: " ";
+    display: table; }
+  .container:after {
+    clear: both; }
+
+.container--left {
+  margin-left: 0; }
+
+.container--right {
+  margin-right: 0; }
+
+.jumbotron {
+  width: 100%;
+  padding: 4.854rem calc((100% - 960px + (1.5rem * 2)) / 2); }
+  .jumbotron:before,
+  .jumbotron:after {
+    content: " ";
+    display: table; }
+  .jumbotron:after {
+    clear: both; }
+
 .color--white {
   color: white; }
 
@@ -1014,26 +1014,20 @@ h6 {
   line-height: 1.618rem;
   font-weight: bold; }
 
-code,
-.code {
+code {
   border-radius: 3px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 0.875rem;
   background: #f7f7f7;
   padding: 0.2rem; }
-  code pre >,
-  .code pre > {
+  code pre > {
     background-color: transparent;
     padding: 0;
     margin: 0; }
 
-.code-block,
 pre {
   background: #f7f7f7;
   padding: 0.46354rem; }
-
-.code-block {
-  margin-bottom: 0.92707rem; }
 
 .lead {
   font-size: 20px;

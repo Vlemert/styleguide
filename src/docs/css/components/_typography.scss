@@ -9,3 +9,14 @@ p:not(:last-child) {
 h1, h2 {
   border-bottom: 1px solid color("light-80");
 }
+
+.jumbotron {
+  h1 {
+    border-bottom: 0;
+    margin-bottom: margin("clear");
+  }
+
+  .lead {
+    color: color("accent-20");
+  }
+}

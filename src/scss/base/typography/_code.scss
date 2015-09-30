@@ -2,8 +2,7 @@ $code-background: color("light-20") !default;
 $code-padding: 0.2rem !default;
 $code-font-size: 0.875rem !default;
 
-code,
-.code {
+code {
   @include border-radius();
   font-family: $base-font-family-monospace;
   font-size: $code-font-size;
@@ -17,12 +16,7 @@ code,
   }
 }
 
-.code-block,
 pre {
   background: $code-background;
   padding: padding("tiny");
-}
-
-.code-block {
-  margin-bottom: margin("small");
 }

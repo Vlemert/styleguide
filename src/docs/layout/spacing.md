@@ -14,7 +14,9 @@ title: Spacing
 
 - [Variables](#variables)
 - [Margin](#margin)
+  - [Margin helper](#margin-helper)
 - [Padding](#padding)
+  - [Padding helper](#padding-helper)
 - [Default available modifiers](#default-available-modifiers)
 
 ## Variables
@@ -51,6 +53,23 @@ The default available margins are:
 <div class="bg-color--accent-80 push-bottom--clear">push-bottom--clear</div>
 {% endexample %}
 
+### Margin Helper
+
+{% highlight scss %}
+$margin-modifiers: (
+  "clear" : 0,
+  "tiny"  : $margin / ($golden-ratio * 2),
+  "small" : $margin / $golden-ratio,
+  null    : $margin,
+  "large" : $margin * $golden-ratio,
+  "huge"  : $margin * ($golden-ratio * 2),
+);
+
+@function margin($modifier: null) {
+  @return unquote(map-get($margin-modifiers, $modifier));
+}
+{% endhighlight %}
+
 ## Padding
 
 {% example html %}
@@ -61,6 +80,23 @@ The default available margins are:
 <div class="bg-color--accent-80 push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
 <div class="bg-color--accent-80 push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div>
 {% endexample %}
+
+### Padding Helper
+
+{% highlight scss %}
+$padding-modifiers: (
+  "clear" : 0,
+  "tiny"  : $padding / ($golden-ratio * 2),
+  "small" : $padding / $golden-ratio,
+  null    : $padding,
+  "large" : $padding * $golden-ratio,
+  "huge"  : $padding * ($golden-ratio * 2),
+);
+
+@function padding($modifier: null) {
+  @return unquote(map-get($padding-modifiers, $modifier));
+}
+{% endhighlight %}
 
 ## Default available modifiers
 

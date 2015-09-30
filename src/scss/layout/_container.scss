@@ -50,5 +50,27 @@ $container-sides-padding: padding() !default;
 .jumbotron {
   @include clearfix;
   width: 100%;
-  padding: map-get($margin-modifiers, "huge") calc((100% - #{$container-width}) / 2);
+
+  @if $enabled-container-responsive {
+    padding: map-get($margin-modifiers, "huge") calc((100% - #{$container-width} + (#{$grid-gutter} * 2)) / 2);
+
+    @if $container-max-width-mobile {
+      @include mobile {
+        padding: map-get($margin-modifiers, "huge") calc((100% - 100vw + (#{$grid-gutter} * 2)) / 2);
+      }
+    }
+    @if $container-max-width-tablet {
+      @include tablet {
+        padding: map-get($margin-modifiers, "huge") calc((100% - 100vw + (#{$grid-gutter} * 2)) / 2);
+      }
+    }
+    @if $container-max-width-desktop {
+      @include desktop {
+        padding: map-get($margin-modifiers, "huge") calc((100% - 100vw + (#{$grid-gutter} * 2)) / 2);
+      }
+    }
+  }
+  @else {
+    padding: map-get($margin-modifiers, "huge") calc((100% - #{$container-width} + (#{$grid-gutter} * 2)) / 2);
+  }
 }

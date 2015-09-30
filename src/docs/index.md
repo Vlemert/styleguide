@@ -6,7 +6,7 @@ title: Home
 <div class="jumbotron push-bottom--huge bg-color--accent color--white">
 	<h1>Craft</h1>
 
-	<p class="push-bottom">The CSS toolkit and guidelines that powers Web Applications.</p>
+	<p class="lead push-bottom">The CSS toolkit and guidelines that powers Web Applications.</p>
 
 	<a href="{{ site.baseurl }}/scaffolding/" class="button button-reverse">
 		Read the docs

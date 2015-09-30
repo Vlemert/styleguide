@@ -11,6 +11,7 @@ title: Typography
 
 ## Contents
 
+- [Variables](#variables)
 - [Headings](#headings)
 - [Body text](#body-text)
 - [Lead paragraph](#lead-paragraph)
@@ -20,8 +21,33 @@ title: Typography
 - [Lists](#lists)
    - [Unordered list](#unordered-list)
    - [Ordered list](#ordered-list)
+   
+## Variables
+
+| Sass Variable    | Default Value | Description |
+|------------------|---------------|-------------|
+| `$base-font-size` | `16px` | The base font-size, by default all `rem` calculations are based on this value |
+| `$base-font-family-sans-serif` | `"Helvetica Neue", Helvetica, Arial, sans-serif` | The base font-family for *sans-serif* fonts |
+| `$base-font-family-serif` | `Georgia, "Times New Roman", Times, serif` | The base font-family for *serif* fonts |
+| `$base-font-family-monospace` | `Menlo, Monaco, Consolas, "Courier New", monospace` | The base font-family for *monospace* fonts |
+| `$base-font-family` | `16px` | The base font-family where you're application is based on. |
 
 ## Headings
+
+### Variables
+
+| Sass Variable    | Default Value | Description |
+|------------------|---------------|-------------|
+| `$heading-font-family` | `inherit` | The font-family for all headers |
+| `$heading-font-weight` | `bold` | The default font-weight for all headers |
+| `$heading-color` | `inherit` | The default text color for all headers |
+| `$h1-font-size` | `3rem` | The default font-size for `H1` |
+| `$h2-font-size` | `1.75rem` | The default font-size for `H2` |
+| `$h3-font-size` | `1.5rem` | The default font-size for `H3` |
+| `$h4-font-size` | `1.25rem` | The default font-size for `H4` |
+| `$h5-font-size` | `1rem` | The default font-size for `H5` |
+| `$h6-font-size` | `1rem` | The default font-size for `H6` |
+
 
 {% example html %}
 <h1>h1. Craft heading</h1>

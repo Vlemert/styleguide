@@ -10,7 +10,13 @@ title: Layout
   define the columns you'ld like in your styleguide. 
 </p>
 
-You can find all layout related styles in the `scss/layout` directory.
+> You can find all layout related styles in the `scss/layout` directory.
+
+## Contents
+
+- [Container](#container)
+  - [Variables](#variables)
+  - [BEM Modifiers](#bem-modifiers)
 
 ## Container
 
@@ -22,14 +28,6 @@ Center your page's content with a `.container`.
 </div>
 {% endhighlight %}
 
-### BEM Modifiers
-
-| Sass Variable    | Description |
-|------------------------------------------------|
-| `.container--left` | Aligns the container to the left side of your screen |
-| `.container--right` | Aligns the container to the right side of your screen |
-
-
 ### Variables
 
 | Sass Variable    | Default Value | Description |
@@ -37,3 +35,11 @@ Center your page's content with a `.container`.
 | `$container-width` | `960px`         | Sets the width of a container |
 | `$container-sides-padding` | `padding()`         | The padding of a container when the screen is smaller than the max-width (only applicable if container-responsive is true) |
 | `$enabled-container-responsive` | `true`         | If enabled, the container has a max-width and possibly a padding. If disabled, the container width is fixed |
+
+
+### BEM Modifiers
+
+| Class name    | Description |
+|------------------------------------------------|
+| `.container--left` | Aligns the container to the left side of your screen |
+| `.container--right` | Aligns the container to the right side of your screen |
