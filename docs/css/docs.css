@@ -1503,21 +1503,22 @@ h1, h2 {
     margin-top: 0;
     margin-bottom: 0; }
 
+.sidebar > ul > li {
+  border-bottom: 1px solid #e6e6e9; }
+  .sidebar > ul > li:last-child {
+    border-bottom: 0; }
+
 .sidebar__item {
   padding: 0.46354rem 0.92707rem;
   font-size: 0.875rem;
   text-decoration: none;
-  color: #173956;
-  border-bottom: 1px solid #e6e6e9; }
+  color: #173956; }
   .sidebar__item a, .sidebar__item {
     display: block; }
     .sidebar__item a:hover, .sidebar__item:hover {
       background-color: #f7f7f7; }
-    .sidebar__item a:only-child, .sidebar__item:only-child {
-      border-bottom: 0; }
-  .sidebar__item li:last-child,
-  :last-child > .sidebar__item {
-    border-bottom: 0; }
+  li:hover > .sidebar__item + ul {
+    display: block; }
   .sidebar__item + ul {
     display: none; }
     .sidebar__item + ul .sidebar__item {

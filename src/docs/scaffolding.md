@@ -9,9 +9,9 @@ Scaffolding refers to the global resets and depedencies Craft is built upon.
 
 ## Contents
 
-- HTML5 Doctype
-- Box-sizing
-- Built on (S)CSS-Wipe
+- [HTML5 Doctype](#html5-doctype)
+- [Box-sizing](#box-sizing)
+- [Build on (S)CSS-Wipe](#build-on-scss-wipe)
  
 ## HTML5 Doctype 
 
