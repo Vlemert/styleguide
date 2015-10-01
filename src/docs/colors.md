@@ -7,9 +7,9 @@ title: Colors
 
 <div class="grid push-bottom">
   <div class="docs__color column column--one-sixth bg-color--white">white</div>
-  <div class="docs__color column column--one-sixth bg-color--black">black</div>
+  <div class="docs__color column column--one-sixth bg-color--black color--white">black</div>
   <div class="docs__color column column--one-sixth bg-color--background-icons">background-icons</div>
-  <div class="docs__color column column--one-sixth bg-color--sec-grey">sec-grey</div>
+  <div class="docs__color column column--one-sixth bg-color--secondary-grey">sec-grey</div>
   <div class="docs__color column column--one-sixth bg-color--icon-text">icon-text</div>
   <div class="docs__color column column--one-sixth bg-color--main-text">main-text</div>
 </div>
