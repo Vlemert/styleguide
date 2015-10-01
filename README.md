@@ -1,4 +1,4 @@
-# Pencil Styleguide
+# Craft Styleguide
 
 ## Installation
 
@@ -20,6 +20,7 @@ Or
 
   ```
   npm run watch
+  open http://localhost:4000
   ```
   
 ## Build the CSS and Docs just once
