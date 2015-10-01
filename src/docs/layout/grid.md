@@ -7,7 +7,7 @@ title: Grid
 
 <p class="lead">
   Craft's Grid system is pretty advanced. The grid system is flexible built and you can customize it for every application.
-  The columns within a `.grid` block are always bound to the `width` of `.grid`, you can use the default `.grid` settings
+  The columns within a <code>.grid</code> block are always bound to the <code>width</code> of <code>.grid</code>, you can use the default <code>.grid</code> settings
   or overwrite it in your own (s)css.
 </p>
 

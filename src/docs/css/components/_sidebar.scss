@@ -1,6 +1,6 @@
 .sidebar {
   @include border-radius();
-  border: 1px solid color("tertiary-grey");
+  border: 1px solid color("light-40");
 
   ul {
     @include reset-unordered-list;
@@ -8,7 +8,7 @@
 }
 
 .sidebar > ul > li {
-  border-bottom: 1px solid color("secundary-grey");
+  border-bottom: 1px solid color("light-40");
 
   &:last-child {
     border-bottom: 0;
@@ -17,15 +17,14 @@
 
 .sidebar__item {
   padding: padding("tiny") padding("small");
-  font-size: 0.875rem;
   text-decoration: none;
-  color: color("main-text");
+  color: color("dark-80");
 
   // Style a.sidebar__item, if sidebar__item render it as a block in stead of inline
   a, & {
     display: block;
     &:hover {
-      background-color: color("background-icons");
+      background-color: color("light-20");
     }
   }
 
@@ -39,7 +38,7 @@
     .sidebar__item {
       padding: padding("tiny") padding();
       border-bottom: 0;
-      color: color("icon-text");
+      color: color("dark-40");
     }
   }
 }

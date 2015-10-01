@@ -1,13 +1,13 @@
 $margin: 1.5rem !default;
-$golden-ratio: 1.618;
+$scale: 1.2 !default;
 
 $margin-modifiers: (
   "clear" : 0,
-  "tiny"  : $margin / ($golden-ratio * 2),
-  "small" : $margin / $golden-ratio,
+  "tiny"  : $margin / ($scale * 2),
+  "small" : $margin / $scale,
   null    : $margin,
-  "large" : $margin * $golden-ratio,
-  "huge"  : $margin * ($golden-ratio * 2),
+  "large" : $margin * $scale,
+  "huge"  : $margin * ($scale * 2),
 ) !default;
 
 $padding-modifiers: $margin-modifiers !default;

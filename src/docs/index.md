@@ -3,12 +3,12 @@ layout: default
 title: Home
 ---
 
-<div class="jumbotron push-bottom--huge bg-color--blue-light color--white">
-  <h1>Craft</h1>
+<div class="jumbotron push-bottom--huge bg-color--blue color--white">
+  <h1>Mápka</h1>
 
   <p class="lead push-bottom color--white">The CSS toolkit and guidelines that powers Web Applications.</p>
 
-  <a href="{{ site.baseurl }}/getting-started" class="button button-outline button-white">
+  <a href="{{ site.baseurl }}/scaffolding" class="button button-outline button-white">
     Read the docs
   </a>
 </div>
@@ -16,8 +16,8 @@ title: Home
 <div class="container about-that push-bottom">
   <div class="grid">
     <div class="column column--one-half">
-      <h2>Open Source</h2>
-      <p>Available for use under the MIT license and built with open source projects like SCSS, Jekyll, GulpJS, and more.</p>
+      <h2>Made at Usabilla</h2>
+      <p>Mápka is the base styling layer of Usabilla.</p>
     </div>
     
     <div class="column column--one-half">

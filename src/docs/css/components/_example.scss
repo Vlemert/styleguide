@@ -1,9 +1,9 @@
 .docs-example {
   @include border-radius($border-radius $border-radius 0 0);
   padding: padding("small");
-  border-top: 1px solid color("icon-text");
-  border-left: 1px solid color("icon-text");
-  border-right: 1px solid color("icon-text");
+  border-top: 1px solid color("light-40");
+  border-left: 1px solid color("light-40");
+  border-right: 1px solid color("light-40");
   position: relative;
 
   &:after {
@@ -12,16 +12,16 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: color("secondary-grey");
+    background-color: color("dark-60");
     padding: 0 padding("tiny");
-    color: color("light");
+    color: color("light-20");
     font-size: 0.75rem;
     font-family: $base-font-family-monospace;
   }
 
   + .highlight {
     @include border-radius(0 0 $border-radius $border-radius);
-    border: 1px solid color("icon-text");
+    border: 1px solid color("light-40");
 
     pre {
       margin: 0;

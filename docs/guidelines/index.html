@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 
 	<title>
-		 Layout · Craft Styleguide
+		 Guidelines · Craft Styleguide
 	</title>
 
 	<link rel="stylesheet" href="/css/docs.css">
@@ -46,7 +46,7 @@
 			</a>
 		</li>
 		<li>
-			<a class="sidebar__item sidebar__item--selected" href="/layout/">
+			<a class="sidebar__item " href="/layout/">
 				Layout
 			</a>
 
@@ -92,7 +92,7 @@
 <nav class="sidebar">
 	<ul>
 		<li>
-			<a class="sidebar__item " href="/guidelines/">
+			<a class="sidebar__item sidebar__item--selected" href="/guidelines/">
 			Code guidelines
 			</a>
 		</li>
@@ -111,85 +111,23 @@
 
 		</div>
 		<div class="column column--three-quarter column-t--two-third">
-			<h1 id="layout">Layout</h1>
-
-<p class="lead">
-  Layouts in Craft can be simple with plain page containers or more complicated with the grid system where you can 
-  define the columns you'ld like in your styleguide. 
-</p>
-
-<blockquote>
-  <p>You can find all layout related styles in the <code>scss/layout</code> directory.</p>
-</blockquote>
+			<h1 id="guidelines">Guidelines</h1>
 
 <h2 id="contents">Contents</h2>
 
 <ul>
-  <li><a href="#container">Container</a>
-    <ul>
-      <li><a href="#variables">Variables</a></li>
-      <li><a href="#bem-modifiers">BEM Modifiers</a></li>
-    </ul>
-  </li>
+  <li><a href="#colors">Colors</a></li>
 </ul>
 
-<h2 id="container">Container</h2>
+<h2 id="colors">Colors</h2>
 
-<p>Center your page’s content with a <code>.container</code>.</p>
+<p>When you want to demo a color in the style guide, put the color in an element (e.g. <code>div</code>) and put the class name 
+<code>.docs__color</code> on it. Now the color will be shown with more padding and the CSS value of the background color will be 
+shown below the color name you’ve put in the element as HTML.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- content here --&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="docs__color bg-color--blue color--white">blue</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs__color bg-color--blue color--white"</span><span class="nt">&gt;</span>blue<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="variables">Variables</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Sass Variable</th>
-      <th>Default Value</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>$container-width</code></td>
-      <td><code>960px</code></td>
-      <td>Sets the width of a container</td>
-    </tr>
-    <tr>
-      <td><code>$container-sides-padding</code></td>
-      <td><code>padding()</code></td>
-      <td>The padding of a container when the screen is smaller than the max-width (only applicable if container-responsive is true)</td>
-    </tr>
-    <tr>
-      <td><code>$enabled-container-responsive</code></td>
-      <td><code>true</code></td>
-      <td>If enabled, the container has a max-width and possibly a padding. If disabled, the container width is fixed</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="bem-modifiers">BEM Modifiers</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Class name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>.container--left</code></td>
-      <td>Aligns the container to the left side of your screen</td>
-    </tr>
-    <tr>
-      <td><code>.container--right</code></td>
-      <td>Aligns the container to the right side of your screen</td>
-    </tr>
-  </tbody>
-</table>
 
 		</div>
 	</div>

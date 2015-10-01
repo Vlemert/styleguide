@@ -23,15 +23,28 @@
 			</ul>
 		</li>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Typography' or page.title == 'Code' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/typography/">
+			<a class="sidebar__item {% if page.title == 'Typography' or page.title == 'Code' or page.title == 'Fonts' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/typography/">
 				Typography
 			</a>
 
 			<ul>
 				<li>
+					<a href="{{ site.baseurl }}/typography/fonts" class="sidebar__item {% if page.title == 'Fonts' %}sidebar__item--selected{% endif %}">Fonts</a>
+				</li>
+				<li>
 					<a href="{{ site.baseurl }}/typography/code" class="sidebar__item {% if page.title == 'Code' %}sidebar__item--selected{% endif %}">Code</a>
 				</li>
 			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav class="sidebar push-bottom">
+	<ul>
+		<li>
+			<a class="sidebar__item {% if page.title == 'Buttons' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/buttons/">
+			Buttons
+			</a>
 		</li>
 	</ul>
 </nav>

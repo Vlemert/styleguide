@@ -7,7 +7,7 @@ title: Spacing
 
 <p class="lead">
   Spacing gives you helpers to apply paddings and margins to your html elements. TL;DR, by default `padding` is called 
-  `soft` and `margin` is called `push`. By default the modifiers make use of the Golden Ratio.
+  `soft` and `margin` is called `push`. By default the modifiers make use of the Modular Scale, defined in `$scale`
 </p>
 
 ## Contents
@@ -24,7 +24,7 @@ title: Spacing
 | Sass Variable        | Default Value                           | Description        |
 |----------------------|-----------------------------------------|--------------------|
 | `$margin`            | `1.5rem`                                | The default margin |
-| `$golden-ratio`      | `1.618`                                 | The golden ratio used to calculate margin modifiers |
+| `$scale`      | `1.2`                                 | The scale that is used to calculate margin modifiers |
 | `$margin-modifiers`  | [`(...)`](#default-available-modifiers) | A Sass key-value list to define the margin modifier naming and value per modifier |
 | `$padding-modifiers` | `$margin-modifiers`                     | A Sass key-value list to define the padding modifier naming and value per modifier |
 
@@ -45,12 +45,12 @@ The default available margins are:
 ### Demo
 
 {% example html %}
-<div class="bg-color--accent-80 push-bottom--tiny">push-bottom--tiny</div>
-<div class="bg-color--accent-80 push-bottom--small">push-bottom--small</div>
-<div class="bg-color--accent-80 push-bottom">push-bottom</div>
-<div class="bg-color--accent-80 push-bottom--large">push-bottom--large</div>
-<div class="bg-color--accent-80 push-bottom--huge">push-bottom--huge</div>
-<div class="bg-color--accent-80 push-bottom--clear">push-bottom--clear</div>
+<div class="bg-color--blue-light push-bottom--tiny">push-bottom--tiny</div>
+<div class="bg-color--blue-light push-bottom--small">push-bottom--small</div>
+<div class="bg-color--blue-light push-bottom">push-bottom</div>
+<div class="bg-color--blue-light push-bottom--large">push-bottom--large</div>
+<div class="bg-color--blue-light push-bottom--huge">push-bottom--huge</div>
+<div class="bg-color--blue-light push-bottom--clear">push-bottom--clear</div>
 {% endexample %}
 
 ### Margin Helper
@@ -58,11 +58,11 @@ The default available margins are:
 {% highlight scss %}
 $margin-modifiers: (
   "clear" : 0,
-  "tiny"  : $margin / ($golden-ratio * 2),
-  "small" : $margin / $golden-ratio,
+  "tiny"  : $margin / ($scale * 2),
+  "small" : $margin / $scale,
   null    : $margin,
-  "large" : $margin * $golden-ratio,
-  "huge"  : $margin * ($golden-ratio * 2),
+  "large" : $margin * $scale,
+  "huge"  : $margin * ($scale * 2),
 );
 
 @function margin($modifier: null) {
@@ -73,12 +73,12 @@ $margin-modifiers: (
 ## Padding
 
 {% example html %}
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--tiny">soft-bottom--tiny</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--small">soft-bottom--small</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom">soft-bottom</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--large">soft-bottom--large</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--tiny">soft-bottom--tiny</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--small">soft-bottom--small</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom">soft-bottom</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--large">soft-bottom--large</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div>
 {% endexample %}
 
 ### Padding Helper
@@ -86,11 +86,11 @@ $margin-modifiers: (
 {% highlight scss %}
 $padding-modifiers: (
   "clear" : 0,
-  "tiny"  : $padding / ($golden-ratio * 2),
-  "small" : $padding / $golden-ratio,
+  "tiny"  : $padding / ($scale * 2),
+  "small" : $padding / $scale,
   null    : $padding,
-  "large" : $padding * $golden-ratio,
-  "huge"  : $padding * ($golden-ratio * 2),
+  "large" : $padding * $scale,
+  "huge"  : $padding * ($scale * 2),
 );
 
 @function padding($modifier: null) {
@@ -112,11 +112,11 @@ $padding-modifiers: (
 {% highlight scss %}
 $margin-modifiers: (
   "clear" : 0,
-  "tiny"  : $margin / ($golden-ratio * 2),
-  "small" : $margin / $golden-ratio,
+  "tiny"  : $margin / ($scale * 2),
+  "small" : $margin / $scale,
   null    : $margin,
-  "large" : $margin * $golden-ratio,
-  "huge"  : $margin * ($golden-ratio * 2),
+  "large" : $margin * $scale,
+  "huge"  : $margin * ($scale * 2),
 ) !default;
 
 $padding-modifiers: $margin-modifiers !default;

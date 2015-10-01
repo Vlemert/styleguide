@@ -30,7 +30,8 @@ title: Typography
 | `$base-font-family-sans-serif` | `"Helvetica Neue", Helvetica, Arial, sans-serif` | The base font-family for *sans-serif* fonts |
 | `$base-font-family-serif` | `Georgia, "Times New Roman", Times, serif` | The base font-family for *serif* fonts |
 | `$base-font-family-monospace` | `Menlo, Monaco, Consolas, "Courier New", monospace` | The base font-family for *monospace* fonts |
-| `$base-font-family` | `16px` | The base font-family where you're application is based on. |
+| `$base-font-family` | `$base-font-family-sans-serif` | The base font-family where you're application is based on. |
+| `$base-text-color` | `color("dark-80")` | The base text color used in the website. *[Colors](/colors)* |
 
 ## Headings
 

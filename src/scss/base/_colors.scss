@@ -1,53 +1,52 @@
-$white: rgba(255, 255, 255, 1);
 $black: rgba(0, 0, 0, 1);
 
-$background-icons: rgba(249, 249, 249, 1);
-$light-grey: rgba(247, 247, 247, 1);
-$secundary-grey: rgba(207, 207, 207, 1);
-$tertiary-grey: rgba(186, 186, 186, 1);
-$icon-text: rgba(107, 107, 107, 1);
-$main-text: rgba(17, 17, 17, 1);
+$dark: rgba(35, 39, 42, 1);
+$dark-80: rgba(65, 71, 76, 1);
+$dark-60: rgba(78, 86, 92, 1);
+$dark-40: rgba(89, 99, 107, 1);
 
-$blue-light: rgb(124, 216, 255);
-$blue: rgba(66, 192, 255, 1);
-$blue-dark: rgb(56, 164, 220);
+$light-40: rgba(200, 210, 218, 1);
+$light-20: rgba(238, 243, 247, 1);
 
-$red-light: rgba(234, 67, 67, 1);
-$red: rgba(201, 0, 0, 1);
-$red-dark: rgba(147, 4, 4, 1);
+$white: rgba(255, 255, 255, 1);
 
-$orange: rgba(249, 166, 72, 1);
+$blue-dark: rgba(0, 138, 171, 1);
+$blue: rgba(0, 165, 201, 1);
+$blue-light: rgba(67, 202, 234, 1);
 
-$yellow-light: rgba(255, 221, 100, 1);
-$yellow: rgba(255, 194, 42, 1);
-$yellow-dark: rgba(215, 153, 0, 1);
+$red-dark: rgba(218, 69, 83, 1);
+$red: rgba(244, 96, 110, 1);
+$red-light: rgba(252, 123, 135, 1);
 
-$green-light: rgba(67, 234, 136, 1);
+$yellow-dark: rgba(222, 166, 75, 1);
+$yellow: rgba(255, 194, 125, 1);
+$yellow-light: rgba(255, 217, 156, 1);
+
+$green-dark: rgba(0, 162, 101, 1);
 $green: rgba(0, 201, 126, 1);
-$green-dark: rgba(0, 171, 119, 1);
+$green-light: rgba(82, 215, 165, 1);
 
 $colors: (
-  "white": $white,
   "black": $black,
-  "background-icons": $background-icons,
-  "light-grey": $light-grey,
-  "secundary-grey": $secundary-grey,
-  "tertiary-grey": $tertiary-grey,
-  "icon-text": $icon-text,
-  "main-text": $main-text,
-  "blue-light": $blue-light,
-  "blue": $blue,
+  "dark": $dark,
+  "dark-80": $dark-80,
+  "dark-60": $dark-60,
+  "dark-40": $dark-40,
+  "light-40": $light-40,
+  "light-20": $light-20,
+  "white": $white,
   "blue-dark": $blue-dark,
-  "red-light": $red-light,
-  "red": $red,
+  "blue": $blue,
+  "blue-light": $blue-light,
   "red-dark": $red-dark,
-  "orange": $orange,
-  "yellow-light": $yellow-light,
-  "yellow": $yellow,
+  "red": $red,
+  "red-light": $red-light,
   "yellow-dark": $yellow-dark,
-  "green-light": $green-light,
-  "green": $green,
+  "yellow": $yellow,
+  "yellow-light": $yellow-light,
   "green-dark": $green-dark,
+  "green": $green,
+  "green-light": $green-light,
 ) !default;
 
 @function color($type) {

@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 
 	<title>
-		Spacing &middot; Craft Styleguide
+		 Spacing · Craft Styleguide
 	</title>
 
 	<link rel="stylesheet" href="/css/docs.css">
@@ -69,9 +69,22 @@
 
 			<ul>
 				<li>
+					<a href="/typography/fonts" class="sidebar__item ">Fonts</a>
+				</li>
+				<li>
 					<a href="/typography/code" class="sidebar__item ">Code</a>
 				</li>
 			</ul>
+		</li>
+	</ul>
+</nav>
+
+<nav class="sidebar push-bottom">
+	<ul>
+		<li>
+			<a class="sidebar__item " href="/buttons/">
+			Buttons
+			</a>
 		</li>
 	</ul>
 </nav>
@@ -102,7 +115,7 @@
 
 <p class="lead">
   Spacing gives you helpers to apply paddings and margins to your html elements. TL;DR, by default `padding` is called 
-  `soft` and `margin` is called `push`. By default the modifiers make use of the Golden Ratio.
+  `soft` and `margin` is called `push`. By default the modifiers make use of the Modular Scale, defined in `$scale`
 </p>
 
 <h2 id="contents">Contents</h2>
@@ -139,9 +152,9 @@
       <td>The default margin</td>
     </tr>
     <tr>
-      <td><code>$golden-ratio</code></td>
-      <td><code>1.618</code></td>
-      <td>The golden ratio used to calculate margin modifiers</td>
+      <td><code>$scale</code></td>
+      <td><code>1.2</code></td>
+      <td>The scale that is used to calculate margin modifiers</td>
     </tr>
     <tr>
       <td><code>$margin-modifiers</code></td>
@@ -201,28 +214,28 @@
 
 <h3 id="demo">Demo</h3>
 
-<div class="docs-example clearfix"><div class="bg-color--accent-80 push-bottom--tiny">push-bottom--tiny</div>
-<div class="bg-color--accent-80 push-bottom--small">push-bottom--small</div>
-<div class="bg-color--accent-80 push-bottom">push-bottom</div>
-<div class="bg-color--accent-80 push-bottom--large">push-bottom--large</div>
-<div class="bg-color--accent-80 push-bottom--huge">push-bottom--huge</div>
-<div class="bg-color--accent-80 push-bottom--clear">push-bottom--clear</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny"</span><span class="nt">&gt;</span>push-bottom--tiny<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--small"</span><span class="nt">&gt;</span>push-bottom--small<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom"</span><span class="nt">&gt;</span>push-bottom<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--large"</span><span class="nt">&gt;</span>push-bottom--large<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--huge"</span><span class="nt">&gt;</span>push-bottom--huge<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--clear"</span><span class="nt">&gt;</span>push-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="bg-color--blue-light push-bottom--tiny">push-bottom--tiny</div>
+<div class="bg-color--blue-light push-bottom--small">push-bottom--small</div>
+<div class="bg-color--blue-light push-bottom">push-bottom</div>
+<div class="bg-color--blue-light push-bottom--large">push-bottom--large</div>
+<div class="bg-color--blue-light push-bottom--huge">push-bottom--huge</div>
+<div class="bg-color--blue-light push-bottom--clear">push-bottom--clear</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny"</span><span class="nt">&gt;</span>push-bottom--tiny<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--small"</span><span class="nt">&gt;</span>push-bottom--small<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom"</span><span class="nt">&gt;</span>push-bottom<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--large"</span><span class="nt">&gt;</span>push-bottom--large<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--huge"</span><span class="nt">&gt;</span>push-bottom--huge<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--clear"</span><span class="nt">&gt;</span>push-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="margin-helper">Margin Helper</h3>
 
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-modifiers</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"clear"</span> <span class="o">:</span> <span class="m">0</span><span class="o">,</span>
-  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
-  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
+  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="nv">$scale</span><span class="o">,</span>
   <span class="n">null</span>    <span class="o">:</span> <span class="nv">$margin</span><span class="o">,</span>
-  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
-  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="nv">$scale</span><span class="o">,</span>
+  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
 
 <span class="k">@function</span> <span class="nf">margin</span><span class="p">(</span><span class="nv">$modifier</span><span class="o">:</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
@@ -231,28 +244,28 @@
 
 <h2 id="padding">Padding</h2>
 
-<div class="docs-example clearfix"><div class="bg-color--accent-80 push-bottom--tiny soft-bottom--tiny">soft-bottom--tiny</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--small">soft-bottom--small</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom">soft-bottom</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--large">soft-bottom--large</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
-<div class="bg-color--accent-80 push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--tiny"</span><span class="nt">&gt;</span>soft-bottom--tiny<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--small"</span><span class="nt">&gt;</span>soft-bottom--small<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom"</span><span class="nt">&gt;</span>soft-bottom<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--large"</span><span class="nt">&gt;</span>soft-bottom--large<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--huge"</span><span class="nt">&gt;</span>soft-bottom--huge<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--accent-80 push-bottom--tiny soft-bottom--clear"</span><span class="nt">&gt;</span>soft-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="docs-example clearfix"><div class="bg-color--blue-light push-bottom--tiny soft-bottom--tiny">soft-bottom--tiny</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--small">soft-bottom--small</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom">soft-bottom</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--large">soft-bottom--large</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--huge">soft-bottom--huge</div>
+<div class="bg-color--blue-light push-bottom--tiny soft-bottom--clear">soft-bottom--clear</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom--tiny"</span><span class="nt">&gt;</span>soft-bottom--tiny<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom--small"</span><span class="nt">&gt;</span>soft-bottom--small<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom"</span><span class="nt">&gt;</span>soft-bottom<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom--large"</span><span class="nt">&gt;</span>soft-bottom--large<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom--huge"</span><span class="nt">&gt;</span>soft-bottom--huge<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-color--blue-light push-bottom--tiny soft-bottom--clear"</span><span class="nt">&gt;</span>soft-bottom--clear<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="padding-helper">Padding Helper</h3>
 
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$padding-modifiers</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"clear"</span> <span class="o">:</span> <span class="m">0</span><span class="o">,</span>
-  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$padding</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
-  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$padding</span> <span class="o">/</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
+  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$padding</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$padding</span> <span class="o">/</span> <span class="nv">$scale</span><span class="o">,</span>
   <span class="n">null</span>    <span class="o">:</span> <span class="nv">$padding</span><span class="o">,</span>
-  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$padding</span> <span class="o">*</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
-  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$padding</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$padding</span> <span class="o">*</span> <span class="nv">$scale</span><span class="o">,</span>
+  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$padding</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
 <span class="p">);</span>
 
 <span class="k">@function</span> <span class="nf">padding</span><span class="p">(</span><span class="nv">$modifier</span><span class="o">:</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
@@ -298,11 +311,11 @@
 
 <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$margin-modifiers</span><span class="p">:</span> <span class="p">(</span>
   <span class="s2">"clear"</span> <span class="o">:</span> <span class="m">0</span><span class="o">,</span>
-  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
-  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
+  <span class="s2">"tiny"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"small"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">/</span> <span class="nv">$scale</span><span class="o">,</span>
   <span class="n">null</span>    <span class="o">:</span> <span class="nv">$margin</span><span class="o">,</span>
-  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="nv">$golden-ratio</span><span class="o">,</span>
-  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$golden-ratio</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
+  <span class="s2">"large"</span> <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="nv">$scale</span><span class="o">,</span>
+  <span class="s2">"huge"</span>  <span class="o">:</span> <span class="nv">$margin</span> <span class="o">*</span> <span class="p">(</span><span class="nv">$scale</span> <span class="o">*</span> <span class="m">2</span><span class="p">)</span><span class="o">,</span>
 <span class="p">)</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span>
 
 <span class="nv">$padding-modifiers</span><span class="p">:</span> <span class="nv">$margin-modifiers</span> <span class="o">!</span><span class="nb">default</span><span class="p">;</span></code></pre></div>
@@ -323,6 +336,7 @@
 </div>
 
 <script src="/js/anchor.min.js"></script>
+<script src="/js/colors.js"></script>
 <script>
 	var selector = 'h1, h2, h3';
 	anchors.options = {

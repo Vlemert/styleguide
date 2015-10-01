@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 
 	<title>
-		{{ page.title }} &middot; Craft Styleguide
+		{{ page.title-prefix }} {{ page.title }} · Craft Styleguide
 	</title>
 
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/docs.css">
@@ -47,6 +47,7 @@
 </div>
 
 <script src="{{ site.baseurl }}/js/anchor.min.js"></script>
+<script src="{{ site.baseurl }}/js/colors.js"></script>
 <script>
 	var selector = 'h1, h2, h3';
 	anchors.options = {

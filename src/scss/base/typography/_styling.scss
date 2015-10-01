@@ -2,7 +2,7 @@
 .lead {
   font-size: $base-font-size * 1.25;
   line-height: ($base-font-size * 1.25) * 1.618;
-  color: color("main-text");
+  color: color("dark-80");
   margin-bottom: margin("small");
 }
 
@@ -10,7 +10,10 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-small { font-size: $base-font-size * 0.75; }
+small {
+  font-family: $base-small-font-family;
+  font-size: $base-font-size * 0.75;
+}
 
 u { text-decoration: underline; }
 
