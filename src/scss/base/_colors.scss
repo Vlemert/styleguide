@@ -1,51 +1,55 @@
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+
+$background-icons: rgba(249, 249, 249, 1);
+$light-grey: rgba(247, 247, 247, 1);
+$secundary-grey: rgba(207, 207, 207, 1);
+$tertiary-grey: rgba(186, 186, 186, 1);
+$icon-text: rgba(107, 107, 107, 1);
+$main-text: rgba(17, 17, 17, 1);
+
+$blue-light: rgb(124, 216, 255);
+$blue: rgba(66, 192, 255, 1);
+$blue-dark: rgb(56, 164, 220);
+
+$red-light: rgba(234, 67, 67, 1);
+$red: rgba(201, 0, 0, 1);
+$red-dark: rgba(147, 4, 4, 1);
+
+$orange: rgba(249, 166, 72, 1);
+
+$yellow-light: rgba(255, 221, 100, 1);
+$yellow: rgba(255, 194, 42, 1);
+$yellow-dark: rgba(215, 153, 0, 1);
+
+$green-light: rgba(67, 234, 136, 1);
+$green: rgba(0, 201, 126, 1);
+$green-dark: rgba(0, 171, 119, 1);
+
 $colors: (
-  "white":    rgba(255, 255, 255, 1),
-  "light-20": rgba(247, 247, 247, 1),
-  "light-40": rgba(230, 230, 233, 1),
-  "light-60": rgba(217, 217, 222, 1),
-  "light-80": rgba(205, 205, 211, 1),
-  "light":    rgba(192, 192, 200, 1),
-
-  "dark-20": rgba(153, 169, 179, 1),
-  "dark-40": rgba(103, 116, 124, 1),
-  "dark-60": rgba(59, 68, 79, 1),
-  "dark-80": rgba(23, 57, 86, 1),
-  "dark":    rgba(20, 43, 68, 1),
-  "black":   rgba(0, 0, 0, 1),
-
-  "accent-20": rgba(212, 250, 255, 1),
-  "accent-40": rgba(185, 240, 255, 1),
-  "accent-60": rgba(163, 228, 255, 1),
-  "accent-80": rgba(109, 212, 255, 1),
-  "accent":    rgba(66, 192, 255, 1),
+  "white": $white,
+  "black": $black,
+  "background-icons": $background-icons,
+  "light-grey": $light-grey,
+  "secundary-grey": $secundary-grey,
+  "tertiary-grey": $tertiary-grey,
+  "icon-text": $icon-text,
+  "main-text": $main-text,
+  "blue-light": $blue-light,
+  "blue": $blue,
+  "blue-dark": $blue-dark,
+  "red-light": $red-light,
+  "red": $red,
+  "red-dark": $red-dark,
+  "orange": $orange,
+  "yellow-light": $yellow-light,
+  "yellow": $yellow,
+  "yellow-dark": $yellow-dark,
+  "green-light": $green-light,
+  "green": $green,
+  "green-dark": $green-dark,
 ) !default;
 
 @function color($type) {
   @return map-get($colors, $type);
-}
-
-@mixin text-colors {
-  @each $color-name, $color in $colors {
-    .color--#{$color-name} {
-      color: #{$color};
-    }
-  }
-}
-
-@include text-colors;
-
-@mixin bg-colors {
-  @each $color-name, $color in $colors {
-    .bg-color--#{$color-name} {
-      background-color: #{$color};
-    }
-  }
-}
-
-@include bg-colors;
-
-@mixin var-colors {
-  @each $color-name, $color in $colors {
-    #{"color-" + $color-name}: $color;
-  }
 }

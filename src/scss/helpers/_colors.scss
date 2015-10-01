@@ -1,0 +1,19 @@
+@mixin text-colors {
+  @each $color-name, $color in $colors {
+    .color--#{$color-name} {
+      color: #{$color};
+    }
+  }
+}
+
+@include text-colors;
+
+@mixin bg-colors {
+  @each $color-name, $color in $colors {
+    .bg-color--#{$color-name} {
+      background-color: #{$color};
+    }
+  }
+}
+
+@include bg-colors;

@@ -5,9 +5,9 @@ $phone-width-max: 480px !default;
 $tablet-width-min: 768px !default;
 $tablet-width-max: 1024px !default;
 
-$mobile-view: '(max-width: #{$tablet-width-min - 1})' !default;
-$tablet-view: '(min-width: #{$tablet-width-min}) and (max-width: #{$tablet-width-max})' !default;
-$desktop-view: '(min-width: #{$tablet-width-max + 1})' !default;
+$mobile-view: "(max-width: #{$tablet-width-min - 1})" !default;
+$tablet-view: "(min-width: #{$tablet-width-min}) and (max-width: #{$tablet-width-max})" !default;
+$desktop-view: "(min-width: #{$tablet-width-max + 1})" !default;
 
 @mixin mobile {
   @media #{$mobile-view} {
@@ -40,18 +40,18 @@ $desktop-view: '(min-width: #{$tablet-width-max + 1})' !default;
 }
 
 @mixin media($to, $from: null) {
-  $min-width: '(min-width: 0)';
-  $max-width: '';
+  $min-width: "(min-width: 0)";
+  $max-width: "";
 
   @if $from {
-    $min-width: '(min-width: #{$from})';
+    $min-width: "min-width: #{$from})";
   }
 
   @if $to {
-    $max-width: 'and (max-width: #{$to})';
+    $max-width: "nd (max-width: #{$to})"
   }
 
-  $media-query: '#{$min-width} #{$max-width}';
+  $media-query: "#{$min-width} #{$max-width}";
 
   @media #{$media-query} {
     @content;

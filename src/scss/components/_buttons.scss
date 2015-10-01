@@ -1,24 +1,78 @@
 .button {
   @include border-radius();
-  background: linear-gradient(color("light-40"), color("light-60"));
-  border: 1px solid color("light-60");
-  border-top: 1px solid color("light-80");
-  border-bottom: 1px solid color("light");
-  box-shadow: color("white") 0 1px 0 inset, rgba(color("black"), 0.1) 0 1px 0 0;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
-  color: color("black");
+  display: inline-block;
+  background: color("blue");
+  color: color("white");
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-bottom: 2px solid color("blue-dark");
   cursor: pointer;
-  padding: 8px 15px 6px;
+  padding: padding("small") padding();
   text-decoration: none;
 
   &:hover {
-    background: linear-gradient(color("light-20"), color("light-40"));
-    color: color("dark");
+    background-color: color("blue-light");
   }
 
   &:hover:active,
   &:active {
-    background: linear-gradient(color("light-60"), color("light-80"));
-    color: color("dark");
+    background-color: color("blue");
+    box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.25);
+  }
+}
+
+.button-green {
+  background: color("green");
+  border-color: color("green-dark");
+}
+
+.button-yellow {
+  background: color("yellow");
+  border-color: color("yellow-dark");
+}
+
+.button-red {
+  background: color("red");
+  border-color: color("red-dark");
+}
+
+.button-black {
+  background: color("icon-text");
+  border-color: color("main-text");
+}
+
+.button-outline {
+  border: 2px solid color("blue");
+  background: transparent;
+  color: color("blue");
+
+  &:hover {
+    background: rgba($white, 0.1);
+  }
+
+  &.button-white {
+    border-color: color("white");
+    color: color("white");
+  }
+
+  &.button-green {
+    border-color: color("green");
+    color: color("green");
+  }
+
+  &.button-yellow {
+    border-color: color("yellow");
+    color: color("yellow");
+  }
+
+  &.button-red {
+    border-color: color("red");
+    color: color("red");
+  }
+
+  &.button-black {
+    border-color: color("icon-text");
+    color: color("icon-text");
   }
 }

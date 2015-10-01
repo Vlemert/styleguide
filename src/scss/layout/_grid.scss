@@ -105,7 +105,8 @@ $columns: (
 @include render-columns;
 
 // Equal width columns via table sorcery.
-.grid--flex {
+.grid--flex,
+.grid--table {
   margin-left: 0;
   margin-right: 0;
 

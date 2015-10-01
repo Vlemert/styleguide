@@ -2,15 +2,9 @@
 .lead {
   font-size: $base-font-size * 1.25;
   line-height: ($base-font-size * 1.25) * 1.618;
-  color: color("dark-60");
+  color: color("main-text");
   margin-bottom: margin("small");
 }
-
-.text-left { text-align: left; }
-
-.text-center { text-align: center; }
-
-.text-right { text-align: right; }
 
 strong { font-weight: bold; }
 
@@ -24,21 +18,8 @@ del,
 s { text-decoration: line-through; }
 
 mark {
-  background-color: color("accent-20");
+  background-color: color("blue-light");
   font-style: normal;
   font-weight: normal;
   padding: 0 5px;
-}
-
-.text-nowrap {
-  white-space: nowrap;
-}
-
-.text-truncate {
-  display: inline-block;
-  max-width: 125px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  vertical-align: top;
 }

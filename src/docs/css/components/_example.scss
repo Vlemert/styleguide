@@ -1,9 +1,9 @@
 .docs-example {
   @include border-radius($border-radius $border-radius 0 0);
   padding: padding("small");
-  border-top: 1px solid color("light-60");
-  border-left: 1px solid color("light-60");
-  border-right: 1px solid color("light-60");
+  border-top: 1px solid color("icon-text");
+  border-left: 1px solid color("icon-text");
+  border-right: 1px solid color("icon-text");
   position: relative;
 
   &:after {
@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: color("light-20");
+    background-color: color("secondary-grey");
     padding: 0 padding("tiny");
     color: color("light");
     font-size: 0.75rem;
@@ -21,7 +21,7 @@
 
   + .highlight {
     @include border-radius(0 0 $border-radius $border-radius);
-    border: 1px solid color("light-60");
+    border: 1px solid color("icon-text");
 
     pre {
       margin: 0;
@@ -38,8 +38,8 @@
   .column {
     padding: padding("small");
     font-family: $base-font-family-monospace;
-    background-color: color("accent-20");
-    border: 1px solid color("accent-40");
+    background-color: color("blue-light");
+    border: 1px solid color("blue");
   }
 }
 

@@ -10,12 +10,10 @@
 
 @import "layout/responsive";
 @import "layout/spacing";
-@import "layout/utility";
 @import "layout/rtl";
 @import "layout/grid";
 @import "layout/container";
 
-@import "base/base";
 @import "base/colors";
 @import "base/typography";
 @import "base/lists";
@@ -23,3 +21,8 @@
 @import "components/buttons";
 @import "components/table";
 @import "components/blockquote";
+
+@import "helpers/colors";
+@import "helpers/spacing";
+@import "helpers/typography";
+@import "helpers/layout";

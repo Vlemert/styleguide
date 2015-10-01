@@ -1,0 +1,27 @@
+// Floats
+.left { float: left; }
+
+.right { float: right; }
+
+// Clear floats
+.clearfix {
+  @include clearfix;
+}
+
+// Centers content horizontally. Can be used inside or outside the grid
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Make an element invisible
+.hidden { display: none; }
+
+// Make an element visible
+.show-block { display: block; }
+
+.show-inline { display: inline; }
+
+.show-inline-block { display: inline-block; }

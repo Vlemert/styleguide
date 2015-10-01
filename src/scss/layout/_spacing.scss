@@ -12,40 +12,6 @@ $margin-modifiers: (
 
 $padding-modifiers: $margin-modifiers !default;
 
-//
-// Spacing mixin
-//
-@mixin spacing($css-key, $namespace: null, $modifiers: (null: 1rem)) {
-  @if not $namespace {
-    $namespace: $css-key;
-  }
-
-  @each $spacing-name, $measurement in $modifiers {
-    $spacing-modifier: "";
-
-    @if $spacing-name {
-      $spacing-modifier: "--#{$spacing-name}";
-    }
-
-    .#{$namespace}#{$spacing-modifier} {
-      margin: #{$measurement};
-    }
-
-    .#{$namespace}-left#{$spacing-modifier} { #{$css-key}-left: #{$measurement}; }
-    .#{$namespace}-right#{$spacing-modifier} { #{$css-key}-right: #{$measurement}; }
-    .#{$namespace}-top#{$spacing-modifier} { #{$css-key}-top: #{$measurement}; }
-    .#{$namespace}-bottom#{$spacing-modifier} { #{$css-key}-bottom: #{$measurement}; }
-    .#{$namespace}-sides#{$spacing-modifier} { #{$css-key}-left: #{$measurement}; #{$css-key}-right: #{$measurement}; }
-    .#{$namespace}-ends#{$spacing-modifier} { #{$css-key}-top: #{$measurement}; #{$css-key}-bottom: #{$measurement}; }
-  }
-}
-
-//
-// Render margins and paddings
-//
-@include spacing('margin', 'push', $margin-modifiers);
-@include spacing('padding', 'soft', $padding-modifiers);
-
 @function margin($modifier: null) {
   @return unquote(map-get($margin-modifiers, $modifier));
 }
