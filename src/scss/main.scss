@@ -2,11 +2,13 @@
 
 @import "base/reset";
 
+@import "utils/variables";
+
 @import "mixins/clearfix";
 @import "mixins/font-faces";
 @import "mixins/border-radius";
 
-@import "utils/variables";
+@import "functions/modular-scale";
 
 @import "layout/responsive";
 @import "layout/spacing";
@@ -15,7 +17,14 @@
 @import "layout/container";
 
 @import "base/colors";
-@import "base/typography";
+
+@import "base/typography/fonts";
+@import "base/typography/base";
+@import "base/typography/heading";
+@import "base/typography/code";
+@import "base/typography/styling";
+@import "base/typography/links";
+
 @import "base/lists";
 
 @import "components/buttons";

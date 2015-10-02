@@ -18,10 +18,11 @@
 }
 
 
-// Font sizes
-
-.tera { font-size: 6.1875rem; line-height: 7.5rem; }
-
-.giga { font-size: 4.375rem; line-height: 5.625rem; }
-
-.kilo { font-size: 3.5rem; line-height: 4.75rem; }
+// Custom font sizes
+.alpha { font-size: ms(-1); };
+.beta { font-size: ms(0); };
+.gamma { font-size: ms(2); };
+.delta { font-size: ms(3); };
+.epsilon { font-size: ms(7); };
+.zeta { font-size: ms(8); };
+.eta { font-size: ms(9); };

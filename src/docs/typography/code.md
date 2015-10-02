@@ -20,16 +20,16 @@ lot. But they also can be usefull in your application when you're presenting Api
 
 | Sass Variable    | Default Value | Description |
 |------------------|---------------|-------------|
-| `$code-background` | `color("light-20")` | The color of the `code` element background |
-| `$code-padding` | `0.2rem` | The padding in a `code` element to give some spacing around inline text |
-| `$code-font-size` | `0.875rem` | The font-size for the `code` element, it may differ from default font-size because a monospace font is used |
+| `$code-background` | `color("light-20")` | The color of the `code` element background. |
+| `$code-padding` | `0.2rem` | The padding in a `code` element to give some spacing around inline text. |
+| `$code-font-size` | `0.875rem` | The font-size for the `code` element, it may differ from default font-size because a monospace font is used. |
 
 ## Code
 
 You the `code` element to show a little piece of code inline in your text.
 
 {% example html %}
-<p>This is a code example about a <code>.class-name</code> element</p> 
+<p>This is a code example about a <code>.class-name</code> element.</p> 
 {% endexample %}
 
 ## Pre

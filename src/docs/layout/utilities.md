@@ -13,9 +13,9 @@ title: Utilities
 
 | Class name    | Description |
 |------------------------------------------------|
-| `.left` | Float to left |
-| `.right` | Float to right |
-| `.clearfix` | Clear the floats, you know the drill |
+| `.left` | Float to left. |
+| `.right` | Float to right. |
+| `.clearfix` | Clear the floats, you know the drill. |
 
 
 {% example html %}

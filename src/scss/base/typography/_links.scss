@@ -1,0 +1,23 @@
+$link-color: color("blue") !default;
+$enable-link-underline: true !default;
+
+a {
+  color: color("blue");
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: color("blue-dark");
+  }
+}
+
+a.color--white {
+  &:hover {
+    color: color("light-40");
+  }
+
+  &:active:hover,
+  &:active {
+    color: color("white");
+  }
+}

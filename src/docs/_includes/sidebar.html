@@ -1,38 +1,41 @@
 <nav class="sidebar push-bottom">
 	<ul>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Scaffolding' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
+			<a class="sidebar__item {% if page.url == '/scaffolding/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
 				Scaffolding
 			</a>
 		</li>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Layout' or page.title == 'Grid' or page.title == 'Spacing' or page.title == 'Utilities' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/layout/">
+			<a class="sidebar__item {% if page.url == '/layout/' or page.url == '/layout/grid/' or page.url == '/layout/spacing/' or page.url == '/layout/utilities/' or page.url == '/layout/modular-scale/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/layout/">
 				Layout
 			</a>
 
 			<ul>
 				<li>
-					<a href="{{ site.baseurl }}/layout/grid" class="sidebar__item {% if page.title == 'Grid' %}sidebar__item--selected{% endif %}">Grid</a>
+					<a href="{{ site.baseurl }}/layout/grid" class="sidebar__item {% if page.url == '/layout/grid/' %}sidebar__item--selected{% endif %}">Grid</a>
 				</li>
 				<li>
-					<a href="{{ site.baseurl }}/layout/spacing" class="sidebar__item {% if page.title == 'Spacing' %}sidebar__item--selected{% endif %}">Spacing</a>
+					<a href="{{ site.baseurl }}/layout/modular-scale" class="sidebar__item {% if page.url == '/layout/modular-scale/' %}sidebar__item--selected{% endif %}">Modular Scale</a>
 				</li>
 				<li>
-					<a href="{{ site.baseurl }}/layout/utilities" class="sidebar__item {% if page.title == 'Utilities' %}sidebar__item--selected{% endif %}">Utilities</a>
+					<a href="{{ site.baseurl }}/layout/spacing" class="sidebar__item {% if page.url == '/layout/spacing/' %}sidebar__item--selected{% endif %}">Spacing</a>
+				</li>
+				<li>
+					<a href="{{ site.baseurl }}/layout/utilities" class="sidebar__item {% if page.url == '/layout/utilities/' %}sidebar__item--selected{% endif %}">Utilities</a>
 				</li>
 			</ul>
 		</li>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Typography' or page.title == 'Code' or page.title == 'Fonts' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/typography/">
+			<a class="sidebar__item {% if page.url == '/typography/' or page.url == '/typography/code/' or page.url == '/typography/fonts/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl }}/typography/">
 				Typography
 			</a>
 
 			<ul>
 				<li>
-					<a href="{{ site.baseurl }}/typography/fonts" class="sidebar__item {% if page.title == 'Fonts' %}sidebar__item--selected{% endif %}">Fonts</a>
+					<a href="{{ site.baseurl }}/typography/fonts" class="sidebar__item {% if page.url == '/typography/fonts/' %}sidebar__item--selected{% endif %}">Fonts</a>
 				</li>
 				<li>
-					<a href="{{ site.baseurl }}/typography/code" class="sidebar__item {% if page.title == 'Code' %}sidebar__item--selected{% endif %}">Code</a>
+					<a href="{{ site.baseurl }}/typography/code" class="sidebar__item {% if page.url == '/typography/code/' %}sidebar__item--selected{% endif %}">Code</a>
 				</li>
 			</ul>
 		</li>
@@ -42,7 +45,7 @@
 <nav class="sidebar push-bottom">
 	<ul>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Buttons' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/buttons/">
+			<a class="sidebar__item {% if page.url == '/buttons/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/buttons/">
 			Buttons
 			</a>
 		</li>
@@ -52,17 +55,17 @@
 <nav class="sidebar">
 	<ul>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Guidelines' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/guidelines/">
+			<a class="sidebar__item {% if page.url == '/guidelines/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/guidelines/">
 			Code guidelines
 			</a>
 		</li>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Colors' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/colors/">
+			<a class="sidebar__item {% if page.url == '/colors/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/colors/">
 			Colors
 			</a>
 		</li>
 		<li>
-			<a class="sidebar__item {% if page.title == 'Markdown' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/markdown/">
+			<a class="sidebar__item {% if page.url == '/markdown/' %}sidebar__item--selected{% endif %}" href="{{ site.baseurl}}/markdown/">
 			Markdown
 			</a>
 		</li>

@@ -3,6 +3,11 @@ node_modules
 
 # Ignore generated files
 .DS_Store
+/docs
+/dist
+/src/docs/css/docs.css
 
 # Jetbrains
 .idea
+
+npm-debug.log

@@ -36,9 +36,10 @@
     display: none;
 
     .sidebar__item {
-      padding: padding("tiny") padding();
+      padding: padding("tiny") padding() padding("tiny") padding("large");
       border-bottom: 0;
       color: color("dark-40");
+      font-size: ms(-1);
     }
   }
 }

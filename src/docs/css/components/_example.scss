@@ -49,7 +49,7 @@
 
 .docs__color {
   @include border-radius();
-  padding: $margin * 2 0;
+  padding: $ms-base * 2 0;
   text-align: center;
 }
 

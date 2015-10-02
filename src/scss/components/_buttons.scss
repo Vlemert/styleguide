@@ -13,12 +13,13 @@
 
   &:hover {
     background-color: color("blue-light");
+    color: color("white");
   }
 
   &:hover:active,
   &:active {
     background-color: color("blue");
-    box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -29,6 +30,11 @@
   &:hover {
     background-color: color("green-light");
   }
+
+  &:hover:active,
+  &:active {
+    background-color: color("green");
+  }
 }
 
 .button-yellow {
@@ -37,6 +43,11 @@
 
   &:hover {
     background-color: color("yellow-light");
+  }
+
+  &:hover:active,
+  &:active {
+    background-color: color("yellow");
   }
 }
 
@@ -47,6 +58,11 @@
   &:hover {
     background-color: color("red-light");
   }
+
+  &:hover:active,
+  &:active {
+    background-color: color("red");
+  }
 }
 
 .button-black {
@@ -54,7 +70,12 @@
   border-color: color("dark-80");
 
   &:hover {
-    background-color: color("light-40");
+    background-color: color("dark-20");
+  }
+
+  &:hover:active,
+  &:active {
+    background-color: color("dark-40");
   }
 }
 
@@ -64,31 +85,95 @@
   color: color("blue");
 
   &:hover {
-    background: rgba($white, 0.1);
+    border-color: color("blue-light");
+    color: color("blue-light");
+    background: transparent;
+  }
+
+  &:hover:active,
+  &:active {
+    border-color: color("blue");
+    color: color("blue");
+    background: transparent;
   }
 
   &.button-white {
     border-color: color("white");
     color: color("white");
+
+    &:hover {
+      border-color: color("light-20");
+      color: color("light-20");
+    }
+
+    &:hover:active,
+    &:active {
+      border-color: color("white");
+      color: color("white");
+    }
   }
 
   &.button-green {
     border-color: color("green");
     color: color("green");
+
+    &:hover {
+      border-color: color("green-light");
+      color: color("green-light");
+    }
+
+    &:hover:active,
+    &:active {
+      border-color: color("green");
+      color: color("green");
+    }
   }
 
   &.button-yellow {
     border-color: color("yellow");
     color: color("yellow");
+
+    &:hover {
+      border-color: color("yellow-light");
+      color: color("yellow-light");
+    }
+
+    &:hover:active,
+    &:active {
+      border-color: color("yellow");
+      color: color("yellow");
+    }
   }
 
   &.button-red {
     border-color: color("red");
     color: color("red");
+
+    &:hover {
+      border-color: color("red-light");
+      color: color("red-light");
+    }
+
+    &:hover:active,
+    &:active {
+      border-color: color("red");
+      color: color("red");
+    }
   }
 
   &.button-black {
-    border-color: color("dark-80");
+    border-color: color("dark-40");
     color: color("dark-40");
+
+    &:hover {
+      border-color: color("dark-20");
+      color: color("dark-20");
+    }
+
+    &:hover:active,
+    &:active {
+      border-color: color("dark-40");
+      color: color("dark-40");
+    }
   }
 }

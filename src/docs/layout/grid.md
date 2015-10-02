@@ -25,13 +25,13 @@ title: Grid
 
 | Sass Variable    | Default Value | Description |
 |------------------|---------------|-------------|
-| `$grid-gutter` | `1.5rem` | The grid gutter is the padding between two columns |
-| `$grid-columns` | `12` | The maximum amount of columns for your grid |
-| `$grid-columns-tablet` | `$grid-column` | The max. amount of columns for your grid when responsive state is tablet |
-| `$grid-columns-mobile` | `3` | The max. amount of columns for your grid when responsive state is mobile (phones) |
-| `$grid-gutter-type` | `margin` | - `Margin` make the gutter a margin between columns,<br>- `Padding` will make the gutter a padding added to columns,<br>- `None` will remove margins and paddings from columns and will make |
-| `$enable-grid-debug` | `false` | Toggle the debug mode for your grid by applying a background color to your columns, so columns will be visible |
-| `$grid-debug-color` | `rgba(0, 0, 0, 0.05)` | The background color of a column in debug mode |
+| `$grid-gutter` | `1.5rem` | The grid gutter is the padding between two columns. |
+| `$grid-columns` | `12` | The maximum amount of columns for your grid. |
+| `$grid-columns-tablet` | `$grid-column` | The maximum amount of columns for your grid when responsive state is tablet. |
+| `$grid-columns-mobile` | `3` | The maximum amount of columns for your grid when responsive state is mobile (phones). |
+| `$grid-gutter-type` | `margin` | - `Margin` make the gutter a margin between columns;<br>- `Padding` will make the gutter a padding added to columns;<br>- `None` will remove margins and paddings from columns. |
+| `$enable-grid-debug` | `false` | Toggle the debug mode for your grid by applying a background color to your columns, so columns will be visible. |
+| `$grid-debug-color` | `rgba(0, 0, 0, 0.05)` | The background color of a column in debug mode. |
 | `$columns` | `(...)` | Sass key-value list with the available grid columns. [See Default Available columns](#default-available-columns) 
 
 ## Demo - Base Grid
@@ -92,7 +92,7 @@ title: Grid
 </div>
 {% endexample %}
 
-### Mix columns if you'ld like
+### Mix columns if you'd like
 
 {% example html %}
 <div class="grid">
@@ -182,9 +182,9 @@ $columns: (
 
 | Modifier | Device | Description |
 |----------|--------|-------------|
-|`.column--*`| Tablet/Desktop | This column setting only applies on mobile resolution |
-|`.column-sm--*`| Mobile/Tablet | This column setting only applies on mobile and tablet resolution |
-|`.column-m--*`| Mobile | This column setting only applies on mobile resolution |
-|`.column-t--*`| Tablet | This column setting only applies on tablet resolution |
+|`.column--*`| Tablet/Desktop | This column setting only applies on mobile resolution. |
+|`.column-sm--*`| Mobile/Tablet | This column setting only applies on mobile and tablet resolution. |
+|`.column-m--*`| Mobile | This column setting only applies on mobile resolution. |
+|`.column-t--*`| Tablet | This column setting only applies on tablet resolution. |
 
 > Where * is the column-name defined in `$columns`

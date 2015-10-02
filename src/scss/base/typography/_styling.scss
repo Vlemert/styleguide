@@ -10,10 +10,7 @@ strong { font-weight: bold; }
 
 em { font-style: italic; }
 
-small {
-  font-family: $base-small-font-family;
-  font-size: $base-font-size * 0.75;
-}
+small { font-size: ms(-1); }
 
 u { text-decoration: underline; }
 

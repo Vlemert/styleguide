@@ -1,4 +1,4 @@
-# Craft Styleguide
+# Mápka Styleguide
 
 ## Installation
 

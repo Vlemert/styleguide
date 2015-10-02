@@ -5,7 +5,7 @@ title: Scaffolding
 
 # Scaffolding
 
-Scaffolding refers to the global resets and depedencies Craft is built upon.
+Scaffolding refers to the global resets and dependencies Craft is built upon.
 
 ## Contents
 
@@ -16,7 +16,7 @@ Scaffolding refers to the global resets and depedencies Craft is built upon.
 ## HTML5 Doctype 
 
 Craft makes use of certain HTML elements and CSS properties that *require* the use of the HTML5 doctype. Include it at
-the beginning of all your pages
+the beginning of all your pages.
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -37,8 +37,8 @@ for [CSS-Wipe](https://www.npmjs.com/package/css-wipe).
 
 Some features of CSS-Wipe are:
 
-- removes all padding, margin and border
-- wipes decorations
-- sets box-sizing: border-box for predictable size calculations
-- resets list style types
-- reset styles on bleeding edge webkit elements
+- Removing all padding, margin and border;
+- Wiping decorations;
+- Setting box-sizing: border-box for predictable size calculations;
+- Resetting list style types;
+- Resetting styles on bleeding edge webkit elements.

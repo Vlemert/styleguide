@@ -1,13 +1,10 @@
-$margin: 1.5rem !default;
-$scale: 1.2 !default;
-
 $margin-modifiers: (
   "clear" : 0,
-  "tiny"  : $margin / ($scale * 2),
-  "small" : $margin / $scale,
-  null    : $margin,
-  "large" : $margin * $scale,
-  "huge"  : $margin * ($scale * 2),
+  "tiny"  : ms(-4),
+  "small" : ms(-2),
+  null    : ms(0),
+  "large" : ms(2),
+  "huge"  : ms(4),
 ) !default;
 
 $padding-modifiers: $margin-modifiers !default;

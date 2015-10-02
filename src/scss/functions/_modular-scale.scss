@@ -1,0 +1,23 @@
+$ms-base: 1rem !default;
+$ms-ratio: 1.2 !default;
+
+@function power ($x, $n) {
+  $ret: 1;
+
+  @if $n > 0 {
+    @for $i from 1 through $n {
+      $ret: $ret * $x;
+    }
+  }
+  @else {
+    @for $i from $n to 0 {
+      $ret: $ret / $x;
+    }
+  }
+
+  @return $ret;
+}
+
+@function ms($size: 0, $font-size: $ms-base) {
+  @return $font-size * power($ms-ratio, $size);
+}

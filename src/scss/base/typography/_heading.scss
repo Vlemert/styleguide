@@ -2,12 +2,12 @@ $heading-font-family: $base-font-family !default;
 $heading-font-weight: bold !default;
 $heading-color: inherit !default;
 
-$h1-font-size: 3rem !default;
-$h2-font-size: 1.75rem !default;
-$h3-font-size: 1.5rem !default;
-$h4-font-size: 1.25rem !default;
-$h5-font-size: 1rem !default;
-$h6-font-size: 1rem !default;
+$h1-font-size: ms(6) !default;
+$h2-font-size: ms(5) !default;
+$h3-font-size: ms(4) !default;
+$h4-font-size: ms(3) !default;
+$h5-font-size: ms(2) !default;
+$h6-font-size: ms(-1) !default;
 
 h1,
 h2,
@@ -20,34 +20,14 @@ h6 {
   color: $heading-color;
 }
 
-h1 {
-  font-size: $h1-font-size;
-  line-height: $h1-font-size * 1.618;
-}
+h1 { font-size: $h1-font-size; }
 
-h2 {
-  font-size: $h2-font-size;
-  line-height: $h2-font-size * 1.618;
-}
+h2 { font-size: $h2-font-size; }
 
-h3 {
-  font-size: $h3-font-size;
-  line-height: $h3-font-size * 1.618;
-}
+h3 { font-size: $h3-font-size; }
 
-h4 {
-  font-size: $h4-font-size;
-  line-height: $h4-font-size * 1.618;
-}
+h4 { font-size: $h4-font-size; }
 
-h5 {
-  font-size: $h5-font-size;
-  line-height: $h5-font-size * 1.618;
-  font-weight: bold;
-}
+h5 { font-size: $h5-font-size; }
 
-h6 {
-  font-size: $h6-font-size ;
-  line-height: $h6-font-size * 1.618;
-  font-weight: bold;
-}
+h6 { font-size: $h6-font-size ; }

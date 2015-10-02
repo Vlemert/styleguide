@@ -46,7 +46,7 @@ gulp.task('jekyll', ['sass-docs'], function (gulpCallBack) {
 
 gulp.task('jekyll:watch', ['sass-docs'], function (gulpCallBack) {
   gulp.watch(config.scssFiles, ['sass']);
-  gulp.watch(config.scssFilesDocs, ['sass-docs']);
+  gulp.watch([config.scssFiles, config.scssFilesDocs], ['sass-docs']);
 
   var spawn = require('child_process').spawn;
   var jekyll = spawn('jekyll', ['serve', '--source', config.docsPath, '--destination', config.docsBuildPath, '--config', config.yekyllConfigFile], {stdio: 'inherit'});

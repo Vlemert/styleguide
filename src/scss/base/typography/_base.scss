@@ -4,11 +4,12 @@ $base-font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $base-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $base-font-family: $base-font-family-sans-serif !default;
 $base-text-color: color("dark-80");
+$base-line-height: 1.3 !default;
 
 %base-font {
   font-family: $base-font-family;
   font-size: 100%;
-  line-height: 1.5rem;
+  line-height: $base-line-height;
 }
 
 html {

@@ -7,7 +7,7 @@ title: Layout
 
 <p class="lead">
   Layouts in Craft can be simple with plain page containers or more complicated with the grid system where you can 
-  define the columns you'ld like in your styleguide. 
+  define the columns you'd like in your styleguide. 
 </p>
 
 > You can find all layout related styles in the `scss/layout` directory.
@@ -20,7 +20,7 @@ title: Layout
 
 ## Container
 
-Center your page's content with a `.container`.
+Center your pages content with a `.container`.
 
 {% highlight html %} 
 <div class="container">
