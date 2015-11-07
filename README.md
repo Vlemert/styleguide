@@ -1,4 +1,4 @@
-# Mápka Styleguide
+# Styleguide
 
 ## Installation
 
