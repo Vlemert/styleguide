@@ -9,7 +9,7 @@
   @each $spacing-name, $measurement in $modifiers {
     $spacing-modifier: "";
 
-    @if $spacing-name {
+    @if $spacing-name != "default" {
       $spacing-modifier: "--#{$spacing-name}";
     }
 

@@ -2,7 +2,7 @@ h1,
 h2,
 h3,
 h4,
-p:not(:last-child) {
+p:not(:last-of-type) {
   margin-bottom: margin("small");
 }
 

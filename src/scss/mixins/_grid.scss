@@ -1,0 +1,21 @@
+@mixin column($column: null, $value: null) {
+  @if $value {
+    max-width: calc(#{100 * $value / 12 + '%'} - #{$grid-gutter});
+  }
+
+  @if ($column == 'twelve') {
+    .grid--gutter > & {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin column-gutter($apply: true) {
+  @if $apply == false {
+    $grid-gutter: 0;
+  }
+
+  margin-left: $grid-gutter / 2;
+  margin-right: $grid-gutter / 2;
+}

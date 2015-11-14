@@ -1,0 +1,37 @@
+$black: rgb(0, 0, 0);
+
+$dark: rgb(42, 42, 42);
+$dark-80: rgb(66, 66, 66);
+$dark-60: rgb(89, 89, 89);
+
+$light-40: rgb(191, 201, 210);
+$light-20: rgb(221, 231, 239);
+$light: rgb(238, 243, 247);
+
+$white: rgb(255, 255, 255);
+
+$blue-dark: rgb(39, 116, 155);
+$blue: rgb(56, 164, 220);
+$blue-light: rgb(141, 224, 255);
+
+$green-dark: rgb(54, 149, 93);
+$green: rgb(90, 201, 101);
+$green-light: rgb(119, 222, 179);
+
+$colors: (
+  "black": $black,
+  "dark": $dark,
+  "dark-80": $dark-80,
+  "dark-60": $dark-60,
+  "light-40": $light-40,
+  "light-20": $light-20,
+  "light": $light,
+  "white": $white,
+  "blue-dark": $blue-dark,
+  "blue": $blue,
+  "blue-light": $blue-light,
+  "green-dark": $green-dark,
+  "green": $green,
+  "green-light": $green-light,
+) !default;
+

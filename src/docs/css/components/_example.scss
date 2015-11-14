@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: color("dark-60");
+    background-color: color("light-20");
     padding: 0 padding("tiny");
     color: color("light-20");
     font-size: 0.75rem;
@@ -33,10 +33,13 @@
 
   .grid {
     margin-bottom: margin();
+
+    &:last-child {
+      margin-bottom: margin('clear');
+    }
   }
 
   .column {
-    padding: padding("small");
     font-family: $base-font-family-monospace;
     background-color: color("blue-light");
     border: 1px solid color("blue");
@@ -49,7 +52,8 @@
 
 .docs__color {
   @include border-radius();
-  padding: $ms-base * 2 0;
+  padding-top: $ms-base * 2;
+  padding-bottom: $ms-base * 2;
   text-align: center;
 }
 

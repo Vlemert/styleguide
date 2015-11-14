@@ -38,16 +38,16 @@
 {{ content }}
 
 <div class="container push-top">
-	<footer class="grid footer">
-		<div class="column column--one-whole">
-			Copyright Craft {{ site.time | date: '%Y' }}.<br>
-			Created and maintained by Patrick van Marsbergen. <strong>Currently v{{ site.version }}.</strong>
-		</div>
+	<footer class="footer">
+		Copyright Craft {{ site.time | date: '%Y' }}.<br>
+		Created and maintained by Patrick van Marsbergen. <strong>Currently v{{ site.version }}.</strong>
 	</footer>
 </div>
 
 <script src="{{ site.baseurl }}/js/anchor.min.js"></script>
 <script src="{{ site.baseurl }}/js/colors.js"></script>
+<script src="{{ site.baseurl }}/js/table.js"></script>
+<script src="{{ site.baseurl }}/js/onload.js"></script>
 <script>
 	var selector = 'h1, h2, h3';
 	anchors.options = {

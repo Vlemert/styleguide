@@ -1,11 +1,17 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('autoprefixer');
+var del = require('del');
 
 var config = {
   scssFiles: './src/scss/**/*.scss',
+  iconFiles: './src/icons/**/*',
   docsPath: './src/docs',
+  docsFiles: './src/docs/**/*',
   scssFilesDocs: './src/docs/css/**/*.scss',
+  cssFilesDocs: './src/docs/css/**/*.css',
   yekyllConfigFile: './src/docs/_config.yml',
 
   cssFiles: './dist/**/*.css',
@@ -14,28 +20,31 @@ var config = {
   docsBuildPath: './docs'
 };
 
-gulp.task('sass', function () {
-  gulp.src(config.scssFiles)
+gulp.task('clean', function () {
+  return del([config.destPath, config.cssFilesDocs]);
+});
+
+gulp.task('sass', ['clean'], function () {
+  return gulp.src(config.scssFiles)
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
     .pipe(gulp.dest(config.destPath));
 });
 
-gulp.task('autoprefixer', ['sass'], function () {
-  return gulp.src('dist/main.css')
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('dist'));
-});
-
-gulp.task('sass-docs', function () {
-  gulp.src(config.scssFilesDocs)
+gulp.task('sass-docs', ['sass'], function () {
+  return gulp.src(config.scssFilesDocs)
     .pipe(sass().on('error', sass.logError))
+    .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
     .pipe(gulp.dest(config.docsPath + '/css'));
 });
 
-gulp.task('jekyll', ['sass-docs'], function (gulpCallBack) {
+gulp.task('icons', ['sass-docs'], function () {
+  return gulp.src(config.iconFiles)
+    .pipe(gulp.dest(config.destPath))
+    .pipe(gulp.dest(config.docsPath + '/icons'));
+});
+
+gulp.task('jekyll', ['icons'], function (gulpCallBack) {
   var spawn = require('child_process').spawn;
   var jekyll = spawn('jekyll', ['build', '--source', config.docsPath, '--destination', config.docsBuildPath, '--config', config.yekyllConfigFile], {stdio: 'inherit'});
 
@@ -44,9 +53,9 @@ gulp.task('jekyll', ['sass-docs'], function (gulpCallBack) {
   });
 });
 
-gulp.task('jekyll:watch', ['sass-docs'], function (gulpCallBack) {
-  gulp.watch(config.scssFiles, ['sass']);
-  gulp.watch([config.scssFiles, config.scssFilesDocs], ['sass-docs']);
+gulp.task('jekyll:watch', ['icons'], function (gulpCallBack) {
+  gulp.watch([config.scssFiles, config.docsFiles], ['sass', 'sass-docs']);
+  gulp.watch([config.iconFiles], ['icons']);
 
   var spawn = require('child_process').spawn;
   var jekyll = spawn('jekyll', ['serve', '--source', config.docsPath, '--destination', config.docsBuildPath, '--config', config.yekyllConfigFile], {stdio: 'inherit'});
@@ -56,8 +65,6 @@ gulp.task('jekyll:watch', ['sass-docs'], function (gulpCallBack) {
   });
 });
 
-gulp.task('default', ['sass', 'autoprefixer', 'sass-docs', 'jekyll:watch'], function defaultTask() {
-  gulp.watch(config.scssFiles, ['sass']);
-});
+gulp.task('default', ['clean', 'sass', 'sass-docs', 'icons', 'jekyll:watch']);
 
-gulp.task('build', ['sass', 'autoprefixer', 'sass-docs', 'jekyll']);
+gulp.task('build', ['clean', 'sass', 'sass-docs', 'icons', 'jekyll']);

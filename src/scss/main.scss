@@ -2,21 +2,25 @@
 
 @import "base/reset";
 
+@import "functions/modular-scale";
+@import "functions/spacing";
+@import "functions/colors";
+
 @import "utils/variables";
+@import "variables/spacing";
+@import "variables/grid";
+@import "variables/colors";
 
 @import "mixins/clearfix";
 @import "mixins/font-faces";
 @import "mixins/border-radius";
-
-@import "functions/modular-scale";
+@import "mixins/grid";
 
 @import "layout/responsive";
 @import "layout/spacing";
 @import "layout/rtl";
 @import "layout/grid";
 @import "layout/container";
-
-@import "base/colors";
 
 @import "base/typography/fonts";
 @import "base/typography/base";

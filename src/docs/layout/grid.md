@@ -36,59 +36,23 @@ title: Grid
 
 ## Demo - Base Grid
 
+The grid is fully based on `display: flex` with fallbacks to older browsers, The column modifiers go up to 12 but it's up 
+to you to play with the grid and align your columns the way you like!
+
 {% example html %}
 <div class="grid">
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-  <div class="column column--one-twelfth">1/12</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-sixth">1/6</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-fifth">1/5</div>
-  <div class="column column--one-fifth">1/5</div>
-  <div class="column column--one-fifth">1/5</div>
-  <div class="column column--one-fifth">1/5</div>
-  <div class="column column--one-fifth">1/5</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-quarter">1/4</div>
-  <div class="column column--one-quarter">1/4</div>
-  <div class="column column--one-quarter">1/4</div>
-  <div class="column column--one-quarter">1/4</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-third">1/3</div>
-  <div class="column column--one-third">1/3</div>
-  <div class="column column--one-third">1/3</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-half">1/2</div>
-  <div class="column column--one-half">1/2</div>
-</div>
-
-<div class="grid">
-  <div class="column column--one-whole">1/1</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
+  <div class="column column--one">1/12</div>
 </div>
 {% endexample %}
 
@@ -96,34 +60,62 @@ title: Grid
 
 {% example html %}
 <div class="grid">
-  <div class="column column--one-sixth">1/6</div>
-  <div class="column column--one-half">1/2</div>
-  <div class="column column--one-third">1/3</div>
+  <div class="column column--six">1/6</div>
+  <div class="column column--two">1/2</div>
+  <div class="column column--three">1/3</div>
+</div>
+
+<div class="grid">
+  <div class="column column--one">1/12</div>
+  <div class="column column--two">2/12</div>
+  <div class="column column--three">3/12</div>
+  <div class="column column--four">4/12</div>
+</div>
+
+<div class="grid">
+  <div class="column column--one">1/12</div>
+  <div class="column column--two">2/12</div>
+  <div class="column column--three">3/12</div>
+  <div class="column column--four">4/12</div>
+  <div class="column column--two">2/12</div>
 </div>
 {% endexample %}
 
-## Demo - Flex grid
-
-Sometimes you don't or can't add column modifiers to decide how many columns you want to render. In that case there is 
-the `.grid--flex` modifier. You can add an *unlimited* amount of columns to your grid row which will have an automatic 
-defined column width. 
-
-> Flex grid is only available in `padding` mode, because it uses table rendering for the flexible column widths.
+## Demo - Grid with gutter
 
 {% example html %}
-<div class="grid grid--flex">
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
+<div class="grid grid--gutter">
+  <div class="column column--three">3/12</div>
+  <div class="column column--four">4/12</div>
+  <div class="column column--five">5/12</div>
+</div>
+{% endexample %}
+
+## Demo - Grid with flexible columns
+
+{% example html %}
+<div class="grid grid--gutter">
+  <div class="column column--two">Special content<br>With multi-<br>line :)</div>
+  <div class="column column--one">Small with same height</div>
+  <div class="column column--four">Bigger stuff</div>
 </div>
 
-<div class="grid grid--flex">
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
-  <div class="column">Flex Demo</div>
+<div class="grid grid--gutter grid--valign-top">
+  <div class="column column--two">Special content<br>With multi-<br>line :)</div>
+  <div class="column column--one">Small</div>
+  <div class="column column--four">Bigger stuff</div>
+</div>
+
+<div class="grid grid--gutter grid--valign-center">
+  <div class="column column--two">Special content<br>With multi-<br>line :)</div>
+  <div class="column column--one">Small</div>
+  <div class="column column--four">Bigger stuff</div>
+</div>
+
+<div class="grid grid--gutter grid--valign-bottom">
+  <div class="column column--two">Special content<br>With multi-<br>line :)</div>
+  <div class="column column--one">Small</div>
+  <div class="column column--four">Bigger stuff</div>
 </div>
 {% endexample %}
 
@@ -134,9 +126,9 @@ you can control your columns to do the right thing on the right device.
 
 {% example html %}
 <div class="grid">
-  <div class="column column--two-sixth column-m--one-whole">Column</div>
-  <div class="column column--one-half column-m--one-third">Column</div>
-  <div class="column column--one-sixth column-m--two-third">Column</div>
+  <div class="column column--two column-m--twelve">Column</div>
+  <div class="column column--five column-m--three">Column</div>
+  <div class="column column--one column-m--two">Column</div>
 </div>
 {% endexample %}
 

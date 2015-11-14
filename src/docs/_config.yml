@@ -16,3 +16,5 @@ github:
 sass:
   sass_dir: css
   style: compressed
+
+host: 0.0.0.0

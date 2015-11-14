@@ -1,0 +1,22 @@
+@function ms($size: 0, $font-size: $ms-base) {
+  @return $font-size * power($ms-ratio, $size);
+}
+
+@function margin($modifier-key: "default", $modifier: 0) {
+  @if type-of($modifier-key) == "number" and not unitless($modifier-key) {
+    $modifier: $modifier-key;
+    $modifier-key: "default";
+  }
+
+  @return unquote(map-get($margin-modifiers, $modifier-key) + $modifier);
+}
+
+@function padding($modifier-key: "default", $modifier: 0) {
+  @if type-of($modifier-key) == "number" and not unitless($modifier-key) {
+    $modifier: $modifier-key;
+    $modifier-key: "default";
+  }
+
+  @return unquote(map-get($padding-modifiers, $modifier-key) + $modifier);
+}
+
