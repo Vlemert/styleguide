@@ -502,7 +502,11 @@ ol,
   border-bottom: 2px solid #27749b;
   cursor: pointer;
   padding: 0.69444rem 1rem;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .button:hover {
     background-color: #8de0ff;
     color: white; }

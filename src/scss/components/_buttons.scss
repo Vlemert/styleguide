@@ -10,6 +10,7 @@
   cursor: pointer;
   padding: padding("small") padding();
   text-decoration: none;
+  user-select: none;
 
   &:hover {
     background-color: color("blue-light");
