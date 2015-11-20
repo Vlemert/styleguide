@@ -4,7 +4,6 @@ node_modules
 # Ignore generated files
 .DS_Store
 /docs
-/dist
 /src/docs/css/*.css
 /src/docs/icons/*.svg
 npm-debug.log
