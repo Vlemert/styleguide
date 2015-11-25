@@ -1,180 +1,216 @@
-.button {
-  @include border-radius();
+
+$button-padding: 0.6rem 1.5rem !default;
+$button-outline-padding: 0.5rem 1.37rem !default;
+$button-padding-hover: $button-padding !default;
+
+$button-border-radius: 30px !default;
+$button-transition-duration: 0.25s !default;
+$button-border-width: 2px !default;
+
+%button {
+  @include border-radius($button-border-radius);
   display: inline-block;
-  background: color("blue");
+  background-color: color("cloakroom");
   color: color("white");
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: ms(0);
   font-weight: bold;
-  border-bottom: 2px solid color("blue-dark");
-  cursor: pointer;
-  padding: padding("small") padding();
+  border: 0;
+  border-bottom: 1px solid color("cloakroom-dark");
+  padding: $button-padding;
+  transition: all $button-transition-duration;
+  text-align: center;
   text-decoration: none;
+  appearance: none;
   user-select: none;
+  cursor: pointer;
+}
+
+.button {
+  @extend %button;
 
   &:hover {
-    background-color: color("blue-light");
+    background-color: lighten(color("cloakroom"), 10%);
     color: color("white");
   }
 
   &:hover:active,
   &:active {
-    background-color: color("blue");
-    box-shadow: inset 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
-  }
-}
-
-.button-green {
-  background: color("green");
-  border-color: color("green-dark");
-
-  &:hover {
-    background-color: color("green-light");
+    background-color: color("cloakroom");
+    box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   }
 
-  &:hover:active,
-  &:active {
-    background-color: color("green");
-  }
-}
+  &--green {
+    background: color("green");
+    border-color: color("green-dark");
 
-.button-yellow {
-  background: color("yellow");
-  border-color: color("yellow-dark");
+    &:hover {
+      background-color: lighten(color("green"), 10%);
+    }
 
-  &:hover {
-    background-color: color("yellow-light");
-  }
-
-  &:hover:active,
-  &:active {
-    background-color: color("yellow");
-  }
-}
-
-.button-red {
-  background: color("red");
-  border-color: color("red-dark");
-
-  &:hover {
-    background-color: color("red-light");
+    &:hover:active,
+    &:active {
+      background-color: color("green");
+    }
   }
 
-  &:hover:active,
-  &:active {
-    background-color: color("red");
-  }
-}
+  &--blue {
+    background: color("blue");
+    border-color: color("blue-dark");
 
-.button-black {
-  background: color("dark-40");
-  border-color: color("dark-80");
+    &:hover {
+      background-color: lighten(color("blue"), 10%);
+    }
 
-  &:hover {
-    background-color: color("dark-20");
-  }
-
-  &:hover:active,
-  &:active {
-    background-color: color("dark-40");
-  }
-}
-
-.button-outline {
-  border: 2px solid color("blue");
-  background: transparent;
-  color: color("blue");
-
-  &:hover {
-    border-color: color("blue-light");
-    color: color("blue-light");
-    background: transparent;
+    &:hover:active,
+    &:active {
+      background-color: color("blue");
+    }
   }
 
-  &:hover:active,
-  &:active {
-    border-color: color("blue");
-    color: color("blue");
-    background: transparent;
+  &--dark {
+    background: color("dark-60");
+    border-color: darken(color("dark-60"), 40%);
+
+    &:hover {
+      background-color: lighten(color("dark-60"), 10%);
+    }
+
+    &:hover:active,
+    &:active {
+      background-color: color("dark-60");
+    }
   }
 
-  &.button-white {
+  &--black {
+    background: color("dark");
+    border-color: color("black");
+
+    &:hover {
+      background-color: lighten(color("dark"), 15%);
+    }
+
+    &:hover:active,
+    &:active {
+      background-color: lighten(color("dark"), 5%);
+    }
+  }
+
+  &--white {
+    background: color("white");
     border-color: color("white");
-    color: color("white");
+    color: color("cloakroom");
 
     &:hover {
-      border-color: color("light-20");
-      color: color("light-20");
+      background-color: color("light");
+      color: color("cloakroom");
     }
 
     &:hover:active,
     &:active {
-      border-color: color("white");
-      color: color("white");
+      background-color: color("white");
+      color: color("cloakroom");
     }
   }
 
-  &.button-green {
-    border-color: color("green");
-    color: color("green");
+  &-outline {
+    @extend %button;
+    background: transparent;
+    color: color("cloakroom");
+    padding: $button-outline-padding;
+    border: $button-border-width solid color("cloakroom");
 
     &:hover {
-      border-color: color("green-light");
-      color: color("green-light");
+      border-color: lighten(color("cloakroom"), 10%);
+      color: lighten(color("cloakroom"), 10%);
+      background: transparent;
     }
 
     &:hover:active,
     &:active {
+      border-color: color("cloakroom");
+      color: color("cloakroom");
+      background: transparent;
+    }
+
+    &.button--green {
       border-color: color("green");
       color: color("green");
-    }
-  }
 
-  &.button-yellow {
-    border-color: color("yellow");
-    color: color("yellow");
+      &:hover {
+        border-color: color("green-light");
+        color: color("green-light");
+      }
 
-    &:hover {
-      border-color: color("yellow-light");
-      color: color("yellow-light");
-    }
-
-    &:hover:active,
-    &:active {
-      border-color: color("yellow");
-      color: color("yellow");
-    }
-  }
-
-  &.button-red {
-    border-color: color("red");
-    color: color("red");
-
-    &:hover {
-      border-color: color("red-light");
-      color: color("red-light");
+      &:hover:active,
+      &:active {
+        border-color: color("green");
+        color: color("green");
+      }
     }
 
-    &:hover:active,
-    &:active {
-      border-color: color("red");
-      color: color("red");
+    &.button--blue {
+      border-color: color("blue");
+      color: color("blue");
+
+      &:hover {
+        border-color: color("blue-light");
+        color: color("blue-light");
+      }
+
+      &:hover:active,
+      &:active {
+        border-color: color("blue");
+        color: color("blue");
+      }
     }
-  }
 
-  &.button-black {
-    border-color: color("dark-40");
-    color: color("dark-40");
+    &.button--dark {
+      border-color: color("dark-60");
+      color: color("dark-60");
 
-    &:hover {
-      border-color: color("dark-20");
-      color: color("dark-20");
+      &:hover {
+        border-color: lighten(color("dark-60"), 10%);
+        color: lighten(color("dark-60"), 10%);
+      }
+
+      &:hover:active,
+      &:active {
+        border-color: color("dark-60");
+        color: color("dark-60");
+      }
     }
 
-    &:hover:active,
-    &:active {
+    &.button--black {
       border-color: color("dark-40");
       color: color("dark-40");
+
+      &:hover {
+        border-color: color("dark-20");
+        color: color("dark-20");
+      }
+
+      &:hover:active,
+      &:active {
+        border-color: color("dark-40");
+        color: color("dark-40");
+      }
+    }
+
+    &.button--white {
+      border-color: color("white");
+      color: color("white");
+
+      &:hover {
+        border-color: color("light");
+        color: color("light");
+      }
+
+      &:hover:active,
+      &:active {
+        border-color: color("white");
+        color: color("white");
+      }
     }
   }
 }

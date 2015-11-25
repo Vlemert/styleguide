@@ -4,20 +4,6 @@
   border-top: 1px solid color("light-40");
   border-left: 1px solid color("light-40");
   border-right: 1px solid color("light-40");
-  position: relative;
-
-  &:after {
-    @include border-radius(0 $border-radius);
-    content: "demo";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: color("light-20");
-    padding: 0 padding("tiny");
-    color: color("light-20");
-    font-size: 0.75rem;
-    font-family: $base-font-family-monospace;
-  }
 
   + .highlight {
     @include border-radius(0 0 $border-radius $border-radius);

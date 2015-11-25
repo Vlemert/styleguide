@@ -45,6 +45,12 @@ some useful helpers and functions so you always pick the right color!</div>
   <div class="docs__color column push-bottom bg-color--green-dark color--white">green-dark</div>
 </div>
 
+<div class="grid grid--gutter">
+  <div class="docs__color column push-bottom bg-color--cloakroom-light">cloakroom-light</div>
+  <div class="docs__color column push-bottom bg-color--cloakroom color--white">cloakroom</div>
+  <div class="docs__color column push-bottom bg-color--cloakroom-dark color--white">cloakroom-dark</div>
+</div>
+
 ## HTML Helpers
 
 ### Text colors
@@ -52,7 +58,7 @@ some useful helpers and functions so you always pick the right color!</div>
 Give texts a color with the class names `.color--[color-name]`
 
 {% example html %}
-<div class="color--red">This is red text</div>
+<div class="color--cloakroom">This is brown text</div>
 {% endexample %}
 
 ### Background colors
@@ -65,12 +71,12 @@ Give elements a background color with the class names `.bg-color--[color-name]`
 
 ## Sass function
 
-You can use the colors as a variable, like `$red` or `$blue`, but we advise you to use the Sass function `color("red")` 
+You can use the colors as a variable, like `$green` or `$blue`, but we advise you to use the Sass function `color("green")` 
 or `color("blue")` like in the example below;
 
 {% highlight scss %}
-.make-me-red {
-  color: color("red");
+.make-me-green {
+  color: color("green");
 }
 
 .i-want-a-dark-blue-bg {

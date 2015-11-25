@@ -1,5 +1,5 @@
 $enable-rounded: true !default;
-$border-radius: 3px !default;
+$border-radius: 6px !default;
 
 @mixin border-radius($radius: $border-radius) {
   @if $enable-rounded {

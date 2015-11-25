@@ -1,5 +1,5 @@
 {
-  "name": "general-styleguide",
+  "name": "Craft-Styleguide",
   "version": "1.0.0",
   "description": "A base layer for your Sass bases styleguide. Add your own designed components based on top of the smart base layer which is able to generate usefull css helpers. Includes a Jekyll-based documentation generator inspired by Github's Primer.",
   "scripts": {

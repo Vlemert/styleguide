@@ -1,8 +1,8 @@
 $black: rgb(0, 0, 0);
 
 $dark: rgb(42, 42, 42);
-$dark-80: rgb(66, 66, 66);
-$dark-60: rgb(89, 89, 89);
+$dark-80: rgb(71, 61, 46);
+$dark-60: rgb(90, 75, 58);
 
 $light-40: rgb(191, 201, 210);
 $light-20: rgb(221, 231, 239);
@@ -10,13 +10,17 @@ $light: rgb(238, 243, 247);
 
 $white: rgb(255, 255, 255);
 
-$blue-dark: rgb(39, 116, 155);
-$blue: rgb(56, 164, 220);
-$blue-light: rgb(141, 224, 255);
+$blue-dark: rgb(48, 75, 97);
+$blue: rgb(73, 118, 146);
+$blue-light: rgb(126, 189, 225);
 
-$green-dark: rgb(54, 149, 93);
-$green: rgb(90, 201, 101);
-$green-light: rgb(119, 222, 179);
+$green-dark: rgb(104, 174, 127);
+$green: rgb(130, 201, 151);
+$green-light: rgb(173, 232, 193);
+
+$cloakroom-dark: rgb(179, 154, 123);
+$cloakroom: rgb(212, 184, 147);
+$cloakroom-light: rgb(255, 242, 199);
 
 $colors: (
   "black": $black,
@@ -33,5 +37,8 @@ $colors: (
   "green-dark": $green-dark,
   "green": $green,
   "green-light": $green-light,
+  "cloakroom-dark": $cloakroom-dark,
+  "cloakroom": $cloakroom,
+  "cloakroom-light": $cloakroom-light,
 ) !default;
 
