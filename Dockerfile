@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     nodejs \
     build-essential
 
-# RUN ln -s `which nodejs` /usr/bin/node
+RUN ln -s `which nodejs` /usr/bin/node
 
 RUN curl https://www.npmjs.com/install.sh | sh
 
