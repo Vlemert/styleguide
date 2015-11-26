@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A base layer for your Sass bases styleguide. Add your own designed components based on top of the smart base layer which is able to generate usefull css helpers. Includes a Jekyll-based documentation generator inspired by Github's Primer.",
   "scripts": {
-    "setup": "sudo gem install bundler && bundle install && npm install",
+    "setup": "gem install bundler && bundle install && npm install",
     "watch": "gulp",
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,5 +1,19 @@
 # Styleguide
 
+## Docker
+
+Build
+
+  ```
+  docker build -t "styleguide" .
+  ```
+
+Run gulp
+
+  ```
+  docker run -p 1400:1400 styleguide gulp
+  ```
+
 ## Installation
 
 Run NPM setup
