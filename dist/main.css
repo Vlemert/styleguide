@@ -168,9 +168,9 @@ ul, ol {
 .column {
   margin-left: 0;
   margin-right: 0;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0;
+          flex: 1 0 0; }
   @media (min-width: 768px) and (max-width: 1024px), (min-width: 1025px) {
     .column--one {
       max-width: calc(8.33333% - 1.5rem); } }

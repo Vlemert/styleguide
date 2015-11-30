@@ -47,7 +47,7 @@ $flex-columns: (
 
 .column {
   @include column-gutter(false);
-  flex: 1 0 auto;
+  flex: 1 0 0;
 
   @each $column, $value in $flex-columns {
     @if $enable-responsive-grid {
