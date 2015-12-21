@@ -18,6 +18,9 @@
     "url": "https://github.com/marsbergen/styleguide/issues"
   },
   "homepage": "https://github.com/marsbergen/styleguide#readme",
+  "dependencies": {
+    "scss-wipe": "^4.1.2"
+  }
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "del": "^2.0.2",
@@ -25,7 +28,6 @@
     "gulp-minify-css": "^1.2.1",
     "gulp-postcss": "^6.0.1",
     "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.6.0",
-    "scss-wipe": "^4.1.2"
+    "gulp-sourcemaps": "^1.6.0"
   }
 }
