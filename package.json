@@ -20,7 +20,7 @@
   "homepage": "https://github.com/marsbergen/styleguide#readme",
   "dependencies": {
     "scss-wipe": "^4.1.2"
-  }
+  },
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "del": "^2.0.2",
