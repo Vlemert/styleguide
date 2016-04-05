@@ -19,14 +19,6 @@ Run gulp
 Run NPM setup
 
   ```
-  npm run setup
-  ```
-
-Or
-
-  ``` 
-  gem install bundler
-  bundle install
   npm install
   ```
 
